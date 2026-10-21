@@ -1,0 +1,1218 @@
+import {
+  areaMap,
+  businessPlot,
+  categoryMap,
+  cityMap,
+  homeCrumb,
+  placeMap,
+  routeMap,
+  type Card,
+  type Guide,
+} from "@/app/content/shared";
+
+const see = { href: "/see-and-do", label: "See & do" };
+const places = { href: "/places", label: "Places to go" };
+const stay = { href: "/stay", label: "Stay" };
+const eat = { href: "/eat-and-drink", label: "Eat & drink" };
+
+const placeCards: Card[] = [
+  {
+    href: "/places/norra-vallgrund",
+    title: "Norra Vallgrund",
+    text: "A small fishing village, a sandy beach, and a harbor of red huts.",
+  },
+  {
+    href: "/places/sodra-vallgrund",
+    title: "Södra Vallgrund",
+    text: "The southern village, and the start of the Sommarö trails.",
+  },
+  {
+    href: "/places/bjorkoby",
+    title: "Björköby",
+    text: "The road north, toward the Kvarken Archipelago.",
+  },
+  {
+    href: "/places/replot-bridge",
+    title: "Replot Bridge",
+    text: "The crossing onto the island.",
+  },
+  {
+    href: "/places/kvarken",
+    title: "Kvarken Archipelago",
+    text: "A world heritage landscape at the north end of the island.",
+  },
+];
+
+const seeCards: Card[] = [
+  {
+    href: "/saunas",
+    title: "Saunas",
+    text: "Six saunas you can use or rent, one of them free if you paddle there.",
+  },
+  {
+    href: "/beaches",
+    title: "Beaches",
+    text: "Six official beaches on the island, and one just before the bridge.",
+  },
+  {
+    href: "/hiking",
+    title: "Hiking trails",
+    text: "Ten official trails, from a 15-minute path to a 23 km ferry hike.",
+  },
+  {
+    href: "/ski-trails",
+    title: "Ski trails",
+    text: "Two lit tracks, and the harbor ice when the winter is cold enough.",
+  },
+  {
+    href: "/huts",
+    title: "Huts & outdoor grills",
+    text: "Day shelters, one free overnight cabin, and places to light a fire.",
+  },
+  {
+    href: "/kayaking",
+    title: "Kayaking",
+    text: "Two paddles from Norra Vallgrund beach, to a sauna and a laavu.",
+  },
+  {
+    href: "/biking",
+    title: "Biking trails",
+    text: "Cycling routes on the island, on the map.",
+  },
+  {
+    href: "/towers",
+    title: "Observation towers",
+    text: "Saltkaret on the Bodvattnet loop, and Kikanberget by the harbor.",
+  },
+];
+
+const stayCards: Card[] = [
+  {
+    href: "/stay/rv-camping",
+    title: "RV camping",
+    text: "Places to park a camper, including the harbor at Klobbskat.",
+  },
+  {
+    href: "/stay/tent-camping",
+    title: "Tent camping",
+    text: "Where a tent is welcome, including the yard at Sommarö sauna.",
+  },
+  {
+    href: "/stay/holiday-homes",
+    title: "Holiday homes",
+    text: "Rentable cabins, including Björkören and Sommarön vartiotupa.",
+  },
+];
+
+const eatCards: Card[] = [
+  {
+    href: "/eat-and-drink/restaurants",
+    title: "Restaurants & cafes",
+    text: "Café Kompass, Kvarken Brewery, and Kalle’s Inn at Klobbskat.",
+  },
+];
+
+export const home = {
+  title: "Raippaluoto – Kvarken Archipelago",
+  description:
+    "A guide to Raippaluoto in Mustasaari: villages, saunas, beaches, trails, and a map of the island.",
+  lede: "A fishing island in Mustasaari, across the Replot Bridge. Red boathouses, sandy beaches, saunas the villages heat themselves, and trails out toward the Kvarken Archipelago.",
+  map: areaMap("Map of Raippaluoto", "63.260000", "21.290000", "9.50"),
+  placeCards,
+  seeCards,
+  stayCards,
+  eatCards,
+};
+
+const ferryNote =
+  "The timetable noted for the 2024 season was every day from 10.00 to 18.00 between 29 June and 15 August, then Saturdays and Sundays from 10 to 18 between 16 August and 30 September. Check the current year before you count on a crossing.";
+
+export const guides: Guide[] = [
+  {
+    path: "/places",
+    title: "Places to go",
+    description: "Villages and landscapes on Raippaluoto: Norra Vallgrund, Södra Vallgrund, Björköby, the bridge, and Kvarken.",
+    kicker: "Raippaluoto",
+    lede: "The island is a string of villages. Start in one of them, or drive north until the road runs out at the archipelago.",
+    crumbs: [homeCrumb, { href: "/places", label: "Places to go" }],
+    map: areaMap("Map of places on Raippaluoto", "63.260000", "21.290000", "9.50"),
+    blocks: [],
+    cards: placeCards,
+    cardsHeading: "On the island",
+  },
+  {
+    path: "/places/norra-vallgrund",
+    title: "Norra Vallgrund",
+    description: "A small fishing village on Raippaluoto, with a harbor of red huts, a beach, and a guest harbor.",
+    kicker: "Places to go",
+    lede: "Norra Vallgrund is a small village on Raippaluoto. It was a fishing village, and it is still known for a harbor of classic red fishing huts.",
+    crumbs: [homeCrumb, places, { href: "/places/norra-vallgrund", label: "Norra Vallgrund" }],
+    map: areaMap("Map of Norra Vallgrund", "63.190000", "21.318000", "12.60"),
+    blocks: [
+      { kind: "h2", text: "Things to do" },
+      {
+        kind: "links",
+        items: [
+          { href: "/beaches/norra-vallgrund", title: "Norra Vallgrund Beach", text: "A sandy beach the village looks after, with a sauna and a winter swimming hole." },
+          { href: "/saunas/norra-vallgrund-beach", title: "Beach sauna", text: "10 euros. Firewood included." },
+          { href: "/kayaking/djupskaret", title: "Kayak to Djupskäret sauna", text: "From the beach to the free sauna on Djupskäret." },
+          { href: "/kayaking/sommaro", title: "Kayak to Sommarö laavu", text: "The same line can be skied in a cold winter, once the ice is thick." },
+        ],
+      },
+      { kind: "h2", text: "On the ice" },
+      {
+        kind: "p",
+        text: "In a cold winter the ice in the harbor gets very thick, and locals eventually take snowmobiles and skis out on it. The kayak line toward Sommarö can become a ski line. Wait until you see people already out there. Farther out there are currents, and the ice can be thinner.",
+      },
+      { kind: "h2", text: "Fishing" },
+      {
+        kind: "p",
+        text: "The traditional winter fishing here is with nets. A fishing license for nets is sold at the local store in Södra Vallgrund, Södra Vallgrund Handelslag. A lot of people come for a fishing holiday and use Norra Vallgrund as a base. The guest harbor has a boat ramp.",
+      },
+      { kind: "h2", text: "Berries" },
+      {
+        kind: "p",
+        text: "Sea buckthorn grows at Norra Vallgrund beach. Blueberries and lingonberries show up if you drive down Söderuddentie.",
+      },
+      { kind: "h2", text: "The boat harbor" },
+      {
+        kind: "p",
+        text: "The village keeps two private harbors. Mustasaari keeps one public guest harbor.",
+      },
+      { kind: "h2", text: "History" },
+      {
+        kind: "a",
+        href: "https://storymaps.arcgis.com/stories/122142073eb8416b9cb9e2738234d318",
+        label: "History of Norra Vallgrund",
+      },
+    ],
+  },
+  {
+    path: "/places/sodra-vallgrund",
+    title: "Södra Vallgrund",
+    description: "The southern village on Raippaluoto, where the Sommarö trails begin.",
+    kicker: "Places to go",
+    lede: "Södra Vallgrund is the southern village. The Sommarö walks start here, and the village store sells the net-fishing licenses.",
+    crumbs: [homeCrumb, places, { href: "/places/sodra-vallgrund", label: "Södra Vallgrund" }],
+    map: areaMap("Map of Södra Vallgrund", "63.169000", "21.290000", "12.80"),
+    blocks: [
+      {
+        kind: "p",
+        text: "Sommarön luontopolku is a short, wide, accessible loop of about 1.5 km that ends at Sommarö laavu. The longer Sommarön trail is about 5 km from the same start, out to Sommarösund beach and the sauna you can rent. Sommarön vartiotupa sits on both walks.",
+      },
+      {
+        kind: "p",
+        text: "Södra Vallgrund Handelslag is the store that sells licenses for fishing with nets.",
+      },
+      {
+        kind: "links",
+        items: [
+          { href: "/hiking/sommaron-nature-trail", title: "Sommarön nature trail", text: "1.5 km, accessible, to the laavu." },
+          { href: "/hiking/sommaron", title: "Sommarön hiking trail", text: "About 5 km to the beach and sauna." },
+          { href: "/huts/sommaro-laavu", title: "Sommarö laavu" },
+          { href: "/saunas/sommarosund", title: "Sommarösund sauna" },
+          { href: "/beaches/sodra-vallgrund", title: "Södra Vallgrund beach" },
+        ],
+      },
+    ],
+  },
+  {
+    path: "/places/bjorkoby",
+    title: "Björköby",
+    description: "The village on the way to the Kvarken Archipelago, with a city beach at Röresbukten.",
+    kicker: "Places to go",
+    lede: "You come through Björköby on the way to the north end of the island. The Kvarken Archipelago is the day out. The city beach is at Röresbukten.",
+    crumbs: [homeCrumb, places, { href: "/places/bjorkoby", label: "Björköby" }],
+    map: areaMap("Map of Björköby", "63.356000", "21.314000", "12.50"),
+    blocks: [
+      {
+        kind: "p",
+        text: "For a day walk, Bodvattnet runt is the 4 km loop. The accessible version stops at about 1 km. Both leave from the same landscape of the archipelago.",
+      },
+      {
+        kind: "links",
+        items: [
+          { href: "/places/kvarken", title: "Kvarken Archipelago" },
+          { href: "/hiking/bodvattnet", title: "Bodvattnet runt", text: "4 km loop." },
+          { href: "/hiking/bodvattnet-accessible", title: "Bodvattnet, accessible", text: "About 1 km." },
+          { href: "/beaches/bjorkoby", title: "Björköby beach" },
+        ],
+      },
+    ],
+  },
+  {
+    path: "/places/replot-bridge",
+    title: "Replot Bridge",
+    description: "The bridge onto Raippaluoto, and the beach just before the crossing.",
+    kicker: "Places to go",
+    lede: "The Replot Bridge is the drive onto the island. Fjärdskär beach sits on the mainland side, just before you cross.",
+    crumbs: [homeCrumb, places, { href: "/places/replot-bridge", label: "Replot Bridge" }],
+    map: {
+      title: "Map of the Replot Bridge",
+      href: cityMap,
+      src: "https://www.huts.fi/embed/finland/ostrobothnia/mustasaari/bridges?trails=1&address=1&lat=63.208000&lng=21.470000&zoom=12.80",
+    },
+    blocks: [
+      {
+        kind: "a",
+        href: "https://mustasaari.fi/2023/04/infotilaisuus-raippaluodon-sillan-uudesta-valaistuksesta-2",
+        label: "Mustasaari on the bridge’s new lighting",
+      },
+      {
+        kind: "links",
+        items: [
+          {
+            href: "/beaches/fjardskar",
+            title: "Fjärdskär beach",
+            text: "Just before the bridge. Not on the island itself.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    path: "/places/kvarken",
+    title: "Kvarken Archipelago",
+    description: "The UNESCO Kvarken Archipelago at the north end of Raippaluoto, reached through Björköby.",
+    kicker: "Places to go",
+    lede: "The famous part of the island is at the north end. Drive toward Björköby and you reach the Kvarken Archipelago, a UNESCO World Heritage site.",
+    crumbs: [homeCrumb, places, { href: "/places/kvarken", label: "Kvarken Archipelago" }],
+    map: areaMap("Map of the Kvarken Archipelago", "63.359000", "21.297000", "13.00"),
+    blocks: [
+      {
+        kind: "p",
+        text: "For a day, walk Bodvattnet runt, a 4 km loop, or the accessible kilometer that stops sooner. The loop passes Saltkaret bird tower, the Märraryggen outdoor grill, and Bodvattnet hut. There is free firewood and there are toilets. Blueberries and lingonberries grow in the forest in late summer. In summer you will not be alone.",
+      },
+      {
+        kind: "p",
+        text: "The long walk is Björkö to Panike, 23 km. It needs two water crossings. The ferry at Korsbådafjärden is a new electric ferry and it is free. " + ferryNote + " At Rotörskatan the city does not run a ferry. The two recommended private boat taxis are Neptune Service and Ulf Rönnblad.",
+      },
+      {
+        kind: "links",
+        items: [
+          { href: "/hiking/bodvattnet", title: "Bodvattnet runt" },
+          { href: "/hiking/bodvattnet-accessible", title: "Accessible Bodvattnet" },
+          { href: "/towers/saltkaret", title: "Saltkaret" },
+          { href: "/huts/marraryggen", title: "Märraryggen outdoor grill" },
+          { href: "/hiking/bjorko-panike", title: "Björkö to Panike" },
+        ],
+      },
+      { kind: "a", href: "https://neptune-service.fi", label: "Neptune Service" },
+    ],
+  },
+  {
+    path: "/see-and-do",
+    title: "See & do",
+    description: "Saunas, beaches, trails, huts, kayaking, biking, and towers on Raippaluoto.",
+    kicker: "Raippaluoto",
+    lede: "The island is small enough to learn in a few days. Most of what people come for is outdoors: a sauna, a beach, a loop in the woods, or the archipelago.",
+    crumbs: [homeCrumb, see],
+    map: areaMap("Map of things to do on Raippaluoto", "63.260000", "21.290000", "9.50"),
+    blocks: [],
+    cards: seeCards,
+    cardsHeading: "Guides",
+  },
+  {
+    path: "/saunas",
+    title: "Saunas",
+    description: "Six saunas on Raippaluoto you can use or rent, from a free island sauna to a cabin at Björkören.",
+    kicker: "See & do",
+    lede: "There are six saunas you can use or rent. One is free, if you arrive by boat or kayak. Five others rent from 10 to 40 euros, and one comes with a cabin at 180 euros a day.",
+    crumbs: [homeCrumb, see, { href: "/saunas", label: "Saunas" }],
+    map: categoryMap("Saunas on Raippaluoto", "saunas"),
+    blocks: [],
+    cardsHeading: "The six",
+    cards: [
+      { href: "/saunas/djupskaret", title: "Djupskäret", text: "Free. A public sauna on an island, reached by boat or kayak." },
+      { href: "/saunas/norra-vallgrund-beach", title: "Norra Vallgrund beach", text: "10 euros. A quiet sandy beach, with a winter swimming hole." },
+      { href: "/saunas/sommarosund", title: "Sommarösund", text: "3 euros on Wednesday, or 40 euros to rent it." },
+      { href: "/saunas/klobbskat", title: "Klobbskat", text: "19 euros. The fishing port’s sauna, with a room to sit in." },
+      { href: "/saunas/sommaro", title: "Sommarö", text: "40 euros. Room for a larger group, on the accessible trail." },
+      { href: "/saunas/bjorkoren", title: "Björkören", text: "180 euros a day for the cabin, sauna included." },
+    ],
+  },
+  {
+    path: "/saunas/djupskaret",
+    title: "Djupskäret sauna",
+    description: "A free public sauna on the island of Djupskäret, with a grill, an outhouse, and a pier.",
+    kicker: "Saunas",
+    lede: "A pretty hidden sauna, known mostly to locals and people with boats. It is free.",
+    crumbs: [homeCrumb, see, { href: "/saunas", label: "Saunas" }, { href: "/saunas/djupskaret", label: "Djupskäret" }],
+    map: placeMap("Djupskäret sauna", "saunas", "djupskaret-sauna-and-laavu"),
+    facts: [{ label: "Price", value: "Free" }],
+    blocks: [
+      {
+        kind: "p",
+        text: "On Djupskäret there is a public sauna anyone can use, a covered outdoor grill, an outhouse, and a pier. People have left saws for cutting sauna wood. Others bring wood and leave some for the next guests. On a nice summer weekend it can be busy, and it draws a drinking crowd. On a weekday, very few people are there.",
+      },
+      {
+        kind: "p",
+        text: "It is an easy trip with a boat or a kayak. By kayak, the mapped route starts at Norra Vallgrund beach. By boat, the main channel runs in front of the island and the pier is visible from it.",
+      },
+      {
+        kind: "links",
+        items: [{ href: "/kayaking/djupskaret", title: "Kayak from Norra Vallgrund beach" }],
+      },
+    ],
+  },
+  {
+    path: "/saunas/norra-vallgrund-beach",
+    title: "Norra Vallgrund beach sauna",
+    description: "A community sauna on an isolated sandy beach in Norra Vallgrund. 10 euros, firewood included.",
+    kicker: "Saunas",
+    lede: "Another quiet one. The village looks after it, on a sandy beach where there is usually no one else around.",
+    crumbs: [homeCrumb, see, { href: "/saunas", label: "Saunas" }, { href: "/saunas/norra-vallgrund-beach", label: "Norra Vallgrund beach" }],
+    map: placeMap("Norra Vallgrund beach sauna", "saunas", "norra-vallgrund-beach-and-sauna"),
+    facts: [
+      { label: "Price", value: "10 euros. Firewood included." },
+      { label: "Address", value: "Hamnvägen 170, Norra Vallgrund" },
+    ],
+    blocks: [
+      {
+        kind: "p",
+        text: "A summer evening here is the right time. In winter the community keeps a swimming hole, an avanto. Classic red fishing huts stand around the beach. In summer there is a lot of sea buckthorn to pick. The beach has an outhouse, a fire pit, and changing rooms.",
+      },
+      {
+        kind: "links",
+        items: [
+          { href: "/beaches/norra-vallgrund", title: "The beach" },
+          { href: "/places/norra-vallgrund", title: "Norra Vallgrund" },
+        ],
+      },
+    ],
+  },
+  {
+    path: "/saunas/sommarosund",
+    title: "Sommarösund sauna",
+    description: "A Södra Vallgrund sauna on the beach. 3 euros on Wednesday, or 40 euros to rent.",
+    kicker: "Saunas",
+    lede: "Better known than the village saunas, and still usually free to book. It sits on the beach at the end of the longer Sommarö trail.",
+    crumbs: [homeCrumb, see, { href: "/saunas", label: "Saunas" }, { href: "/saunas/sommarosund", label: "Sommarösund" }],
+    map: placeMap("Sommarösund sauna", "saunas", "sommarosund-sauna"),
+    facts: [
+      { label: "Wednesday", value: "3 euros. Women 17.30–19.30, men 19.30–22.00." },
+      { label: "Private rental", value: "40 euros. Comfortable for four people." },
+    ],
+    blocks: [
+      {
+        kind: "p",
+        text: "Every Wednesday the Södra Vallgrund community heats the sauna and anyone can join. There is also a room with a fireplace and a table, so you can sit with friends during and after. In winter they keep an avanto. There are volleyball courts and an outdoor grill. Bring a little extra firewood if you want to grill, and extra water: there is no tap.",
+      },
+      {
+        kind: "links",
+        items: [{ href: "/hiking/sommaron", title: "Sommarön hiking trail" }],
+      },
+    ],
+  },
+  {
+    path: "/saunas/klobbskat",
+    title: "Klobbskat sauna",
+    description: "The Klobbskat fishing port sauna. 19 euros, with a room and tables.",
+    kicker: "Saunas",
+    lede: "Mostly locals use this one, so it is usually free to rent. The fishing port keeps it, and anyone can book it.",
+    crumbs: [homeCrumb, see, { href: "/saunas", label: "Saunas" }, { href: "/saunas/klobbskat", label: "Klobbskat" }],
+    map: placeMap("Klobbskat sauna", "saunas", "klobbskat-sauna"),
+    facts: [{ label: "Price", value: "19 euros" }],
+    blocks: [
+      {
+        kind: "p",
+        text: "The sauna is in the harbor, with a fairly large room and tables. Klobbskat feels like the middle of nowhere. Kvarken Brewery makes its beer here, and Kalle’s Inn is here too. The harbor also has RV parking, a grill that the city sometimes stocks with wood, and a glass gazebo with a grill looking over the water.",
+      },
+      {
+        kind: "links",
+        items: [
+          { href: "/hiking/kikanberget", title: "Kikanberget" },
+          { href: "/towers/kikanberget", title: "Kikanberget tower" },
+          { href: "/stay/rv-camping", title: "RV parking" },
+        ],
+      },
+    ],
+  },
+  {
+    path: "/saunas/sommaro",
+    title: "Sommarö sauna",
+    description: "A larger sauna near the Sommarö parking lot. 40 euros, with a kitchen building and a yard for tents.",
+    kicker: "Saunas",
+    lede: "The one to book for a bigger group. It is close to the parking lot, on the accessible trail.",
+    crumbs: [homeCrumb, see, { href: "/saunas", label: "Saunas" }, { href: "/saunas/sommaro", label: "Sommarö" }],
+    map: placeMap("Sommarö sauna", "saunas", "sommaro-pihasauna"),
+    facts: [{ label: "Price", value: "40 euros" }],
+    blocks: [
+      {
+        kind: "p",
+        text: "The sauna is large, and a second building has a kitchen. The yard has an outdoor grill and a lot of firewood. You cannot stay overnight in the buildings. You can set up tents around the place.",
+      },
+      {
+        kind: "links",
+        items: [
+          { href: "/hiking/sommaron-nature-trail", title: "Sommarön nature trail" },
+          { href: "/stay/tent-camping", title: "Tent camping" },
+        ],
+      },
+    ],
+  },
+  {
+    path: "/saunas/bjorkoren",
+    title: "Björkören",
+    description: "A Metsähallitus rental cabin with a sauna near Vargis. 180 euros a day.",
+    kicker: "Saunas",
+    lede: "The cheap saunas are the ones above. Björkören is the cabin. You get the sauna by renting the cabin, 180 euros a day.",
+    crumbs: [homeCrumb, see, { href: "/saunas", label: "Saunas" }, { href: "/saunas/bjorkoren", label: "Björkören" }],
+    map: placeMap("Björkören cabin", "wilderness-huts", "bjorkoren-vuokratupa"),
+    facts: [
+      { label: "Price", value: "180 euros a day" },
+      { label: "Sleeps", value: "A group of about six. Bunk beds." },
+      { label: "Managed by", value: "Metsähallitus" },
+    ],
+    blocks: [
+      {
+        kind: "p",
+        text: "The cabin has a kitchen and indoor fireplaces, and the sauna. It is a good holiday spot if six of you want somewhere a bit out of the way. Vargis hiking trail and the kayak rental at Vaasan Kajakkivuokraus are nearby.",
+      },
+      {
+        kind: "links",
+        items: [
+          { href: "/hiking/vargis", title: "Vargis hiking trail" },
+          { href: "/stay/holiday-homes", title: "Holiday homes" },
+        ],
+      },
+    ],
+  },
+  {
+    path: "/beaches",
+    title: "Beaches",
+    description: "Six official beaches on Raippaluoto, plus Fjärdskär just before the bridge.",
+    kicker: "See & do",
+    lede: "There are six official beaches on the island. Fjärdskär is a seventh, on the mainland side of the bridge.",
+    crumbs: [homeCrumb, see, { href: "/beaches", label: "Beaches" }],
+    map: categoryMap("Beaches on Raippaluoto", "beaches"),
+    blocks: [],
+    cardsHeading: "Beaches",
+    cards: [
+      { href: "/beaches/raippaluoto", title: "Raippaluoto beach", text: "By the harbor. Changing rooms, a jumping tower, volleyball, and a kiosk." },
+      { href: "/beaches/norra-vallgrund", title: "Norra Vallgrund beach", text: "Isolated sand, a sauna, and a winter swimming hole." },
+      { href: "/beaches/sodra-vallgrund", title: "Södra Vallgrund beach", text: "In the southern village." },
+      { href: "/beaches/bulleras", title: "Bullerås beach", text: "One of the six official beaches." },
+      { href: "/beaches/vistan", title: "Vistan beach", text: "One of the six official beaches." },
+      { href: "/beaches/bjorkoby", title: "Björköby beach", text: "At Röresbukten, kept by the city of Mustasaari." },
+      { href: "/beaches/fjardskar", title: "Fjärdskär beach", text: "Just before the bridge, not on the island itself." },
+    ],
+  },
+  {
+    path: "/beaches/raippaluoto",
+    title: "Raippaluoto beach",
+    description: "The community beach by the harbor at Kyläsatamantie 200.",
+    kicker: "Beaches",
+    lede: "The community keeps a sandy beach right next to the harbor.",
+    crumbs: [homeCrumb, see, { href: "/beaches", label: "Beaches" }, { href: "/beaches/raippaluoto", label: "Raippaluoto beach" }],
+    map: placeMap("Raippaluoto beach", "beaches", "raippaluoto-beach"),
+    facts: [{ label: "Address", value: "Kyläsatamantie 200, Raippaluoto" }],
+    blocks: [
+      { kind: "p", text: "Changing rooms, an outdoor toilet, a jumping tower, a beach volleyball court, and a kiosk." },
+    ],
+  },
+  {
+    path: "/beaches/norra-vallgrund",
+    title: "Norra Vallgrund beach",
+    description: "A community beach at Hamnvägen 170, with a sauna, grill, and winter swimming hole.",
+    kicker: "Beaches",
+    lede: "The village keeps a sandy beach in a very quiet spot. You can drive and park near it.",
+    crumbs: [homeCrumb, see, { href: "/beaches", label: "Beaches" }, { href: "/beaches/norra-vallgrund", label: "Norra Vallgrund beach" }],
+    map: placeMap("Norra Vallgrund beach", "beaches", "norra-vallgrund-uimaranta"),
+    facts: [{ label: "Address", value: "Hamnvägen 170, Norra Vallgrund" }],
+    blocks: [
+      { kind: "p", text: "Changing rooms, an outdoor toilet, a winter swimming hole, a sauna, an outdoor grill, and firewood." },
+      {
+        kind: "links",
+        items: [{ href: "/saunas/norra-vallgrund-beach", title: "The beach sauna", text: "10 euros." }],
+      },
+    ],
+  },
+  {
+    path: "/beaches/sodra-vallgrund",
+    title: "Södra Vallgrund beach",
+    description: "An official beach in Södra Vallgrund.",
+    kicker: "Beaches",
+    lede: "One of the six official beaches, in Södra Vallgrund.",
+    crumbs: [homeCrumb, see, { href: "/beaches", label: "Beaches" }, { href: "/beaches/sodra-vallgrund", label: "Södra Vallgrund beach" }],
+    map: placeMap("Södra Vallgrund beach", "beaches", "sodra-vallgrund-beach"),
+    blocks: [
+      {
+        kind: "links",
+        items: [{ href: "/places/sodra-vallgrund", title: "Södra Vallgrund" }],
+      },
+    ],
+  },
+  {
+    path: "/beaches/bulleras",
+    title: "Bullerås beach",
+    description: "An official beach on Raippaluoto.",
+    kicker: "Beaches",
+    lede: "One of the six official beaches on the island.",
+    crumbs: [homeCrumb, see, { href: "/beaches", label: "Beaches" }, { href: "/beaches/bulleras", label: "Bullerås" }],
+    map: placeMap("Bullerås beach", "beaches", "bulleras-uimaranta"),
+    blocks: [],
+  },
+  {
+    path: "/beaches/vistan",
+    title: "Vistan beach",
+    description: "An official beach on Raippaluoto.",
+    kicker: "Beaches",
+    lede: "One of the six official beaches on the island.",
+    crumbs: [homeCrumb, see, { href: "/beaches", label: "Beaches" }, { href: "/beaches/vistan", label: "Vistan" }],
+    map: placeMap("Vistan beach", "beaches", "vistan-beach"),
+    blocks: [],
+  },
+  {
+    path: "/beaches/bjorkoby",
+    title: "Björköby beach",
+    description: "The city beach at Röresbukten, close to the Kvarken Archipelago.",
+    kicker: "Beaches",
+    lede: "Mustasaari keeps this beach. It is close to the Kvarken Archipelago world heritage site.",
+    crumbs: [homeCrumb, see, { href: "/beaches", label: "Beaches" }, { href: "/beaches/bjorkoby", label: "Björköby beach" }],
+    map: placeMap("Björköby beach", "beaches", "bjorkoby-uimaranta"),
+    facts: [{ label: "Address", value: "Röresbukten, 65870 Mustasaari" }],
+    blocks: [
+      { kind: "p", text: "Changing rooms, a playground, an outdoor grill, and an outdoor toilet." },
+    ],
+  },
+  {
+    path: "/beaches/fjardskar",
+    title: "Fjärdskär beach",
+    description: "A Mustasaari beach just before the Replot Bridge, at Alskatintie 1337, Iskmo.",
+    kicker: "Beaches",
+    lede: "This one is not actually on Raippaluoto. It is just before the bridge, on the way over. The city of Mustasaari keeps it.",
+    crumbs: [homeCrumb, see, { href: "/beaches", label: "Beaches" }, { href: "/beaches/fjardskar", label: "Fjärdskär" }],
+    map: placeMap("Fjärdskär beach", "beaches", "fjardskar-beach"),
+    facts: [{ label: "Address", value: "Alskatintie 1337, Iskmo" }],
+    blocks: [
+      {
+        kind: "p",
+        text: "Changing rooms, an outdoor grill, an outdoor toilet, and firewood. A lookout tower is close by, and there is another large covered grill with firewood.",
+      },
+      {
+        kind: "links",
+        items: [{ href: "/places/replot-bridge", title: "Replot Bridge" }],
+      },
+    ],
+  },
+  {
+    path: "/hiking",
+    title: "Hiking trails",
+    description: "Hiking on Raippaluoto, from the Sommarö loops to Bodvattnet and the 23 km trail to Panike.",
+    kicker: "Nature & exercise",
+    lede: "There are 10 official hiking trails on Raippaluoto. The ones people actually choose between are below: two in the south, two famous ones in the archipelago, a long trail with ferries, and three quieter walks in the north.",
+    crumbs: [homeCrumb, see, { href: "/hiking", label: "Hiking trails" }],
+    map: categoryMap("Hiking trails on Raippaluoto", "hiking-trails"),
+    blocks: [
+      { kind: "h2", text: "Southern Raippaluoto" },
+      {
+        kind: "p",
+        text: "In Södra Vallgrund, Sommarön luontopolku is a short 1.5 km accessible loop, very wide, ending at Sommarö laavu. The other trail from the same place is about 5 km and goes all the way to Sommarösund beach and the rentable sauna, past old military bunkers and lakes in an old forest. Sommarön vartiotupa, a rental hut for up to 22 people with a sauna, is on both.",
+      },
+      { kind: "h2", text: "The archipelago" },
+      {
+        kind: "p",
+        text: "Drive toward Björköby. Bodvattnet runt is a 4 km loop. The accessible trail is the same start and stops at about 1 km. The loop goes to Saltkaret, Märraryggen, and Bodvattnet hut. Free firewood, toilets, berries in late summer, and other people if you come in summer.",
+      },
+      { kind: "h2", text: "Quieter walks in the north" },
+      {
+        kind: "p",
+        text: "Vikarskat to Hamnbastun is about 1.5 km to Finnhamnen, the free overnight cabin. Vargis is a 2.5 km loop that also meets the end of the Panike trail, with two fire spots and a kayak rental. Kikanberget is a 15-minute path by Klobbskat harbor.",
+      },
+    ],
+    cardsHeading: "Trails",
+    cards: [
+      { href: "/hiking/sommaron-nature-trail", title: "Sommarön nature trail", text: "1.5 km accessible loop to the laavu." },
+      { href: "/hiking/sommaron", title: "Sommarön hiking trail", text: "About 5 km to the beach, the sauna, and the old bunkers." },
+      { href: "/hiking/bodvattnet", title: "Bodvattnet runt", text: "4 km around the archipelago shore." },
+      { href: "/hiking/bodvattnet-accessible", title: "Bodvattnet, accessible", text: "The first kilometer, built to be accessible." },
+      { href: "/hiking/bjorko-panike", title: "Björkö to Panike", text: "23 km, with two water crossings." },
+      { href: "/hiking/vikarskat", title: "Vikarskat to Hamnbastun", text: "About 1.5 km to the free cabin." },
+      { href: "/hiking/vargis", title: "Vargis", text: "A 2.5 km loop, usually quiet." },
+      { href: "/hiking/kikanberget", title: "Kikanberget", text: "Fifteen minutes, by the harbor and the tower." },
+    ],
+  },
+  {
+    path: "/hiking/sommaron-nature-trail",
+    title: "Sommarön nature trail",
+    description: "A 1.5 km accessible loop in Södra Vallgrund, ending at Sommarö laavu.",
+    kicker: "Hiking",
+    lede: "Sommarön luontopolku is the short one. It is about 1.5 km, accessible, and very wide.",
+    crumbs: [homeCrumb, see, { href: "/hiking", label: "Hiking" }, { href: "/hiking/sommaron-nature-trail", label: "Sommarön nature trail" }],
+    map: routeMap("Sommarön nature trail", "hiking-trails", "sommaron-luontopolku-haloren"),
+    facts: [{ label: "Length", value: "About 1.5 km, a loop." }],
+    blocks: [
+      {
+        kind: "p",
+        text: "It ends at Sommarö laavu, a covered shelter with an outdoor grill looking over the sea and an old pier. There is usually a woodpile, and an ax or a saw. Sommarön vartiotupa, the rental hut, is on this trail too.",
+      },
+      {
+        kind: "links",
+        items: [
+          { href: "/huts/sommaro-laavu", title: "Sommarö laavu" },
+          { href: "/huts/sommaron-guard-hut", title: "Sommarön vartiotupa" },
+          { href: "/saunas/sommaro", title: "Sommarö sauna" },
+        ],
+      },
+    ],
+  },
+  {
+    path: "/hiking/sommaron",
+    title: "Sommarön hiking trail",
+    description: "A 5 km trail from Södra Vallgrund to Sommarösund beach and sauna.",
+    kicker: "Hiking",
+    lede: "The longer Sommarö trail starts in the same place as the short loop and runs about 5 km to Sommarösund beach and the sauna.",
+    crumbs: [homeCrumb, see, { href: "/hiking", label: "Hiking" }, { href: "/hiking/sommaron", label: "Sommarön hiking trail" }],
+    map: routeMap("Sommarön hiking trail", "hiking-trails", "sommaron-hiking-trail"),
+    facts: [{ label: "Length", value: "About 5 km." }],
+    blocks: [
+      {
+        kind: "p",
+        text: "The path goes by old military bunkers and lakes in an old forest. Sommarön vartiotupa is on this trail as well as the short one. The hut sleeps up to 22 and has a sauna. At the far end you can rent Sommarösund sauna.",
+      },
+      {
+        kind: "links",
+        items: [
+          { href: "/saunas/sommarosund", title: "Sommarösund sauna" },
+          { href: "/huts/sommaron-guard-hut", title: "Sommarön vartiotupa" },
+        ],
+      },
+    ],
+  },
+  {
+    path: "/hiking/bodvattnet",
+    title: "Bodvattnet runt",
+    description: "A 4 km loop in the Kvarken Archipelago, past Saltkaret, Märraryggen, and Bodvattnet hut.",
+    kicker: "Hiking",
+    lede: "The day walk in the archipelago. A 4 km loop. The accessible trail is the same path for the first kilometer.",
+    crumbs: [homeCrumb, see, { href: "/hiking", label: "Hiking" }, { href: "/hiking/bodvattnet", label: "Bodvattnet runt" }],
+    map: routeMap("Bodvattnet runt", "hiking-trails", "bodvattnet-runt"),
+    facts: [{ label: "Length", value: "4 km, a loop." }],
+    blocks: [
+      {
+        kind: "p",
+        text: "You pass Saltkaret bird tower, the Märraryggen outdoor grill, and Bodvattnet hut. There is free firewood and there are toilets. It is a beautiful loop. Blueberries and lingonberries grow in the forest in late summer. It is a popular place, so in summer there will be other people.",
+      },
+      {
+        kind: "links",
+        items: [
+          { href: "/towers/saltkaret", title: "Saltkaret" },
+          { href: "/huts/marraryggen", title: "Märraryggen" },
+          { href: "/hiking/bodvattnet-accessible", title: "The accessible kilometer" },
+        ],
+      },
+    ],
+  },
+  {
+    path: "/hiking/bodvattnet-accessible",
+    title: "Bodvattnet, accessible",
+    description: "The accessible 1 km of Bodvattnet runt, from Svedjehamn toward Bodback.",
+    kicker: "Hiking",
+    lede: "The same trail as Bodvattnet runt, built so the first kilometer is accessible. It does not continue around the full loop.",
+    crumbs: [homeCrumb, see, { href: "/hiking", label: "Hiking" }, { href: "/hiking/bodvattnet-accessible", label: "Accessible Bodvattnet" }],
+    map: routeMap("Bodvattnet accessible trail", "hiking-trails", "bodvattnet-runt-svedjehamn-bodback"),
+    facts: [{ label: "Length", value: "About 1 km." }],
+    blocks: [
+      {
+        kind: "links",
+        items: [{ href: "/hiking/bodvattnet", title: "The full 4 km loop" }],
+      },
+    ],
+  },
+  {
+    path: "/hiking/bjorko-panike",
+    title: "Björkö to Panike",
+    description: "A 23 km hike from Björkö to Panike, with an electric ferry and a private boat taxi.",
+    kicker: "Hiking",
+    lede: "The multi-day option. It is 23 km, and you have to cross water twice.",
+    crumbs: [homeCrumb, see, { href: "/hiking", label: "Hiking" }, { href: "/hiking/bjorko-panike", label: "Björkö to Panike" }],
+    map: routeMap("Björkö to Panike", "hiking-trails", "bjorko-panike-vaellusreitti"),
+    facts: [{ label: "Length", value: "23 km." }],
+    blocks: [
+      {
+        kind: "p",
+        text: "One crossing is the ferry at Korsbådafjärden, a new electric ferry, and it is free. " + ferryNote,
+      },
+      {
+        kind: "p",
+        text: "The other crossing is at Rotörskatan. The city does not run a ferry there, so you use a private boat taxi. Two are recommended: Neptune Service, and Ulf Rönnblad, +358 500 163 021, ulf.ronnblad@netikka.fi.",
+      },
+      { kind: "a", href: "https://neptune-service.fi", label: "Neptune Service" },
+    ],
+  },
+  {
+    path: "/hiking/vikarskat",
+    title: "Vikarskat to Hamnbastun",
+    description: "A quiet 1.5 km walk to Finnhamnen, the free overnight cabin.",
+    kicker: "Hiking",
+    lede: "If you want to be away from the summer crowds, this is the walk. About 1.5 km, to Finnhamnen wilderness hut.",
+    crumbs: [homeCrumb, see, { href: "/hiking", label: "Hiking" }, { href: "/hiking/vikarskat", label: "Vikarskat" }],
+    map: routeMap("Vikarskat to Hamnbastun", "hiking-trails", "vikarskat-hamnbastun-vaellusreitti"),
+    facts: [
+      { label: "Length", value: "About 1.5 km." },
+      { label: "Parking", value: "Björköbyn kalasatama, Vikarskatvägen 426." },
+    ],
+    blocks: [
+      {
+        kind: "p",
+        text: "Very few people come here. You can also kayak to the cabin from the harbor. The hut is free to stay in overnight. There are bunks and an indoor stove, and no bedding or firewood.",
+      },
+      {
+        kind: "links",
+        items: [{ href: "/huts/finnhamnen", title: "Finnhamnen" }],
+      },
+    ],
+  },
+  {
+    path: "/hiking/vargis",
+    title: "Vargis",
+    description: "A 2.5 km loop in northern Raippaluoto that meets the Björkö–Panike trail.",
+    kicker: "Hiking",
+    lede: "A short loop, 2.5 km, and also the last part of the trail from Björkö to Panike. Easy to drive to, and usually quiet.",
+    crumbs: [homeCrumb, see, { href: "/hiking", label: "Hiking" }, { href: "/hiking/vargis", label: "Vargis" }],
+    map: routeMap("Vargis hiking trail", "hiking-trails", "vargis-vaellusreitti"),
+    facts: [{ label: "Length", value: "2.5 km, a loop." }],
+    blocks: [
+      {
+        kind: "p",
+        text: "Two places for a fire sit near the parking lot: Vargis laavu, and a Vargis open hut. Vaasan Kajakkivuokraus rents kayaks from here. Björkören, the Metsähallitus cabin with a sauna, is very close.",
+      },
+      {
+        kind: "links",
+        items: [
+          { href: "/huts/vargis", title: "Vargis laavu" },
+          { href: "/saunas/bjorkoren", title: "Björkören" },
+        ],
+      },
+    ],
+  },
+  {
+    path: "/hiking/kikanberget",
+    title: "Kikanberget",
+    description: "A short path at Klobbskat, with a tower, a harbor grill, and a sauna.",
+    kicker: "Hiking",
+    lede: "More of a 15-minute path than a hike. Very few people, and the harbor next to it has more going on than the path does.",
+    crumbs: [homeCrumb, see, { href: "/hiking", label: "Hiking" }, { href: "/hiking/kikanberget", label: "Kikanberget" }],
+    map: routeMap("Kikanberget", "hiking-trails", "kikanbergets-naturstig"),
+    blocks: [
+      {
+        kind: "p",
+        text: "Café Kompass is nearby. The Kikanberget observation tower is at the start. In the harbor there is RV parking, an outdoor grill the city sometimes stocks with wood, a glass Klobbskat gazebo with a grill overlooking the water, and the Klobbskat sauna. Kvarken Brewery makes its beer here, and Kalle’s Inn is here.",
+      },
+      {
+        kind: "links",
+        items: [
+          { href: "/towers/kikanberget", title: "Kikanberget tower" },
+          { href: "/saunas/klobbskat", title: "Klobbskat sauna" },
+          { href: "/eat-and-drink/restaurants", title: "Eat & drink" },
+        ],
+      },
+    ],
+  },
+  {
+    path: "/ski-trails",
+    title: "Ski trails",
+    description: "Two official ski tracks on Raippaluoto, plus harbor ice in a cold winter.",
+    kicker: "Nature & exercise",
+    lede: "There are two official ski trails. One is in Norra Vallgrund. The other is the Raippaluoto track. In a cold winter, people also ski the ice from the Norra Vallgrund harbor.",
+    crumbs: [homeCrumb, see, { href: "/ski-trails", label: "Ski trails" }],
+    map: categoryMap("Ski trails on Raippaluoto", "ski-trails", "ski-trails", "63.210000", "21.348000", "12.20"),
+    blocks: [
+      {
+        kind: "p",
+        text: "On the ice, start at the Norra Vallgrund harbor and stay where you can see that locals are already out. The kayak line to Sommarö laavu is one that gets skied when the year is cold enough. Farther out, currents keep the ice thinner.",
+      },
+    ],
+    cardsHeading: "Tracks",
+    cards: [
+      { href: "/ski-trails/norra-vallgrund", title: "Norra Vallgrundin valaistu latu", text: "1.8, 2.8, and 6.8 km. Traditional. The two shorter loops are lit." },
+      { href: "/ski-trails/raippaluoto", title: "Raippaluodon valaistu latu", text: "1.8, 2.8, and 6 km. Traditional and freestyle, on woodchips." },
+      { href: "/kayaking/sommaro", title: "The ice line to Sommarö", text: "Not an official track. The kayak route, when the ice is trusted." },
+    ],
+  },
+  {
+    path: "/ski-trails/norra-vallgrund",
+    title: "Norra Vallgrundin valaistu latu",
+    description: "A traditional ski track in Norra Vallgrund with loops of 1.8, 2.8, and 6.8 km.",
+    kicker: "Ski trails",
+    lede: "The Norra Vallgrund lit track. Three loops, skied traditional.",
+    crumbs: [homeCrumb, see, { href: "/ski-trails", label: "Ski trails" }, { href: "/ski-trails/norra-vallgrund", label: "Norra Vallgrund" }],
+    map: routeMap("Norra Vallgrund ski track", "ski-trails", "norra-vallgrundin-valaistulatu"),
+    facts: [
+      { label: "Loops", value: "1.8 km, 2.8 km, and 6.8 km." },
+      { label: "Style", value: "Traditional." },
+      { label: "Lighting", value: "The two smaller tracks are lit." },
+      { label: "Parking", value: "Replot Sportplan (N63 11.244 E021 17.800)." },
+      { label: "Managed by", value: "IF Kvarken." },
+    ],
+    blocks: [
+      { kind: "a", href: "https://www.ifkvarken.fi/skidning/skidspar", label: "IF Kvarken ski tracks" },
+    ],
+  },
+  {
+    path: "/ski-trails/raippaluoto",
+    title: "Raippaluodon valaistu latu",
+    description: "The Raippaluoto ski track: 1.8, 2.8, and 6 km, traditional and freestyle, on woodchips.",
+    kicker: "Ski trails",
+    lede: "Three loops on woodchips, with both traditional tracks and a maintained freestyle track.",
+    crumbs: [homeCrumb, see, { href: "/ski-trails", label: "Ski trails" }, { href: "/ski-trails/raippaluoto", label: "Raippaluoto" }],
+    map: routeMap("Raippaluoto ski track", "ski-trails", "raippaluodon-valaistu-latu"),
+    facts: [
+      { label: "Loops", value: "1.8 km, 2.8 km, and a larger 6 km loop." },
+      { label: "Style", value: "Traditional, and a maintained freestyle track." },
+      { label: "Surface", value: "Woodchips." },
+      { label: "Lighting", value: "The two smaller routes are lit." },
+      { label: "Parking", value: "The sports field, Vallgrundintie 50, 65800 Raippaluoto." },
+    ],
+    blocks: [],
+  },
+  {
+    path: "/huts",
+    title: "Huts & outdoor grills",
+    description: "Free huts, laavus, and outdoor grills on Raippaluoto, including the overnight cabin at Finnhamnen.",
+    kicker: "Nature & exercise",
+    lede: "There are many free huts on the island. Most are for a day trip, not the night. One free cabin is meant for sleeping: Finnhamnen.",
+    crumbs: [homeCrumb, see, { href: "/huts", label: "Huts & outdoor grills" }],
+    map: categoryMap("Huts on Raippaluoto", "wilderness-huts"),
+    blocks: [
+      { kind: "h2", text: "What the words mean" },
+      {
+        kind: "p",
+        text: "A laavu is a lean-to. It blocks the wind, you can sit in it, and people do sleep in them. There is usually an outdoor grill in front.",
+      },
+      {
+        kind: "p",
+        text: "A cabin here is an open wilderness hut, an autiotupa. The state built them and they are free. No booking. The custom is that the last person to arrive may stay, and in practice it is flexible. A translator will sometimes call them “desert huts.” They are just cabins.",
+      },
+      {
+        kind: "p",
+        text: "Villages and local groups also build huts and leave them open. An outdoor grill, a nuotiopaikka, is only the fire itself: a ring, often picnic benches, often free wood, sometimes an ax or a saw.",
+      },
+    ],
+    cardsHeading: "Places",
+    cards: [
+      { href: "/huts/finnhamnen", title: "Finnhamnen", text: "The free overnight cabin. Bunks and an indoor stove." },
+      { href: "/huts/sommaro-laavu", title: "Sommarö laavu", text: "A covered shelter over the sea, at the end of the short trail." },
+      { href: "/huts/sommaron-guard-hut", title: "Sommarön vartiotupa", text: "A rental hut for up to 22, with a sauna." },
+      { href: "/huts/vargis", title: "Vargis laavu", text: "By the Vargis parking lot, with a second open hut." },
+      { href: "/huts/marraryggen", title: "Märraryggen", text: "The outdoor grill on the Bodvattnet loop." },
+    ],
+  },
+  {
+    path: "/huts/finnhamnen",
+    title: "Finnhamnen",
+    description: "The free overnight wilderness cabin on Raippaluoto, reached from Vikarskat.",
+    kicker: "Huts",
+    lede: "If you want to hike and sleep in a free cabin, this is the one on the island. It is easy to reach, and usually quiet.",
+    crumbs: [homeCrumb, see, { href: "/huts", label: "Huts" }, { href: "/huts/finnhamnen", label: "Finnhamnen" }],
+    map: placeMap("Finnhamnen", "wilderness-huts", "finnhamnin-autiotupa"),
+    facts: [
+      { label: "Price", value: "Free." },
+      { label: "Parking", value: "Björköbyn kalasatama, Vikarskatvägen 426." },
+      { label: "Inside", value: "An indoor fireplace, old kitchen equipment, and a raised bunk. No bedding and no firewood." },
+    ],
+    blocks: [
+      {
+        kind: "links",
+        items: [{ href: "/hiking/vikarskat", title: "Vikarskat to Hamnbastun", text: "About 1.5 km. You can also kayak from the harbor." }],
+      },
+    ],
+  },
+  {
+    path: "/huts/sommaro-laavu",
+    title: "Sommarö laavu",
+    description: "A covered laavu and outdoor grill at the end of the short Sommarö trail, over the sea.",
+    kicker: "Huts",
+    lede: "A covered lean-to with an outdoor grill, looking over the sea and an old pier. The woodpile is usually full, with an ax or a saw.",
+    crumbs: [homeCrumb, see, { href: "/huts", label: "Huts" }, { href: "/huts/sommaro-laavu", label: "Sommarö laavu" }],
+    map: placeMap("Sommarö laavu", "wilderness-huts", "sommaron-laavu"),
+    blocks: [
+      {
+        kind: "links",
+        items: [
+          { href: "/hiking/sommaron-nature-trail", title: "The 1.5 km trail" },
+          { href: "/kayaking/sommaro", title: "Kayak from Norra Vallgrund" },
+        ],
+      },
+    ],
+  },
+  {
+    path: "/huts/sommaron-guard-hut",
+    title: "Sommarön vartiotupa",
+    description: "A rental hut for up to 22 people on the Sommarö trails, with a sauna.",
+    kicker: "Huts",
+    lede: "A rental hut on both Sommarö trails. It can take up to 22 people, and it has a sauna.",
+    crumbs: [homeCrumb, see, { href: "/huts", label: "Huts" }, { href: "/huts/sommaron-guard-hut", label: "Sommarön vartiotupa" }],
+    map: placeMap("Sommarön vartiotupa", "wilderness-huts", "sommaron-vartiotupa-vuokratupa"),
+    facts: [{ label: "Sleeps", value: "Up to 22. Sauna in the hut." }],
+    blocks: [
+      {
+        kind: "links",
+        items: [
+          { href: "/hiking/sommaron-nature-trail", title: "Short trail" },
+          { href: "/hiking/sommaron", title: "Long trail" },
+          { href: "/stay/holiday-homes", title: "Holiday homes" },
+        ],
+      },
+    ],
+  },
+  {
+    path: "/huts/vargis",
+    title: "Vargis laavu",
+    description: "A laavu and an open hut by the Vargis trail parking lot.",
+    kicker: "Huts",
+    lede: "Two fire spots near the Vargis parking lot. One is the laavu. The other is an open hut.",
+    crumbs: [homeCrumb, see, { href: "/huts", label: "Huts" }, { href: "/huts/vargis", label: "Vargis" }],
+    map: placeMap("Vargis laavu", "wilderness-huts", "vargis-laavu"),
+    blocks: [
+      {
+        kind: "links",
+        items: [{ href: "/hiking/vargis", title: "Vargis hiking trail" }],
+      },
+    ],
+  },
+  {
+    path: "/huts/marraryggen",
+    title: "Märraryggen",
+    description: "An outdoor grill on the Bodvattnet loop, with free firewood.",
+    kicker: "Huts",
+    lede: "The outdoor grill on Bodvattnet runt. There is free firewood, and toilets nearby on the loop.",
+    crumbs: [homeCrumb, see, { href: "/huts", label: "Huts" }, { href: "/huts/marraryggen", label: "Märraryggen" }],
+    map: placeMap("Märraryggen", "campfire-spots", "marraryggen-tulipaikka"),
+    blocks: [
+      {
+        kind: "links",
+        items: [{ href: "/hiking/bodvattnet", title: "Bodvattnet runt" }],
+      },
+    ],
+  },
+  {
+    path: "/kayaking",
+    title: "Kayaking",
+    description: "Two kayak routes from Norra Vallgrund beach, to Djupskäret sauna and Sommarö laavu.",
+    kicker: "Nature & exercise",
+    lede: "Two routes are mapped from Norra Vallgrund beach. One ends at the free sauna on Djupskäret. The other ends at Sommarö laavu.",
+    crumbs: [homeCrumb, see, { href: "/kayaking", label: "Kayaking" }],
+    map: categoryMap("Kayaking routes on Raippaluoto", "kayaking-routes", "kayaking-routes", "63.173000", "21.320000", "12.80"),
+    blocks: [
+      {
+        kind: "p",
+        text: "Vaasan Kajakkivuokraus rents kayaks at Vargis. From the Vikarskat harbor you can also paddle to Finnhamnen.",
+      },
+    ],
+    cardsHeading: "Routes",
+    cards: [
+      { href: "/kayaking/djupskaret", title: "To Djupskäret", text: "From the beach to the free sauna." },
+      { href: "/kayaking/sommaro", title: "To Sommarö laavu", text: "From the beach. In a hard winter this line is skied." },
+    ],
+  },
+  {
+    path: "/kayaking/djupskaret",
+    title: "Kayak to Djupskäret",
+    description: "A kayak route from Norra Vallgrund beach to the free sauna on Djupskäret.",
+    kicker: "Kayaking",
+    lede: "From Norra Vallgrund beach to the public sauna on Djupskäret. The sauna, the grill, and the pier are free to use.",
+    crumbs: [homeCrumb, see, { href: "/kayaking", label: "Kayaking" }, { href: "/kayaking/djupskaret", label: "Djupskäret" }],
+    map: routeMap("Kayak to Djupskäret", "kayaking-routes", "kayak-to-djupskaret-sauna"),
+    blocks: [
+      {
+        kind: "links",
+        items: [{ href: "/saunas/djupskaret", title: "Djupskäret sauna" }],
+      },
+    ],
+  },
+  {
+    path: "/kayaking/sommaro",
+    title: "Kayak to Sommarö laavu",
+    description: "A kayak route from Norra Vallgrund beach to Sommarö laavu, skied in a cold winter.",
+    kicker: "Kayaking",
+    lede: "From Norra Vallgrund beach to Sommarö laavu. When the ice is thick enough, and locals are already on it, this is also a ski line.",
+    crumbs: [homeCrumb, see, { href: "/kayaking", label: "Kayaking" }, { href: "/kayaking/sommaro", label: "Sommarö" }],
+    map: routeMap("Kayak to Sommarö laavu", "kayaking-routes", "kayak-to-sommaro-laavu"),
+    blocks: [
+      {
+        kind: "p",
+        text: "Do not treat the ice as safe because the route exists. Currents farther out keep some ice thin. Go when you can see that people from the village are already out.",
+      },
+      {
+        kind: "links",
+        items: [{ href: "/huts/sommaro-laavu", title: "Sommarö laavu" }],
+      },
+    ],
+  },
+  {
+    path: "/biking",
+    title: "Biking trails",
+    description: "Biking trails on Raippaluoto, on the Huts.fi map.",
+    kicker: "Nature & exercise",
+    lede: "Cycling routes for the island are on the map below. A written guide to them is still to come.",
+    crumbs: [homeCrumb, see, { href: "/biking", label: "Biking trails" }],
+    map: {
+      title: "Biking trails on Raippaluoto",
+      href: cityMap,
+      src: "https://www.huts.fi/embed/finland/ostrobothnia/mustasaari/biking-trails?trails=1&address=1&lat=63.260000&lng=21.290000&zoom=9.50",
+    },
+    blocks: [],
+  },
+  {
+    path: "/towers",
+    title: "Observation towers",
+    description: "Saltkaret and Kikanberget, the two observation towers to know on Raippaluoto.",
+    kicker: "Nature & exercise",
+    lede: "Two towers are worth the detour. Saltkaret is on the Bodvattnet loop. Kikanberget is at the start of the short path by Klobbskat harbor.",
+    crumbs: [homeCrumb, see, { href: "/towers", label: "Observation towers" }],
+    map: categoryMap("Observation towers on Raippaluoto", "viewpoints"),
+    blocks: [],
+    cardsHeading: "Towers",
+    cards: [
+      { href: "/towers/saltkaret", title: "Saltkaret", text: "The bird tower on Bodvattnet runt." },
+      { href: "/towers/kikanberget", title: "Kikanberget", text: "At the harbor end of a 15-minute path." },
+    ],
+  },
+  {
+    path: "/towers/saltkaret",
+    title: "Saltkaret",
+    description: "The bird tower on the Bodvattnet loop in the Kvarken Archipelago.",
+    kicker: "Towers",
+    lede: "The bird tower on Bodvattnet runt, in the Kvarken Archipelago.",
+    crumbs: [homeCrumb, see, { href: "/towers", label: "Towers" }, { href: "/towers/saltkaret", label: "Saltkaret" }],
+    map: placeMap("Saltkaret", "viewpoints", "saltkaret"),
+    blocks: [
+      {
+        kind: "links",
+        items: [{ href: "/hiking/bodvattnet", title: "Bodvattnet runt" }],
+      },
+    ],
+  },
+  {
+    path: "/towers/kikanberget",
+    title: "Kikanberget tower",
+    description: "The observation tower at the start of the Kikanberget path, by Klobbskat harbor.",
+    kicker: "Towers",
+    lede: "The tower is at the start of the short Kikanberget path, above Klobbskat harbor.",
+    crumbs: [homeCrumb, see, { href: "/towers", label: "Towers" }, { href: "/towers/kikanberget", label: "Kikanberget" }],
+    map: placeMap("Kikanberget tower", "viewpoints", "kikanberget-luontotorni"),
+    blocks: [
+      {
+        kind: "links",
+        items: [{ href: "/hiking/kikanberget", title: "The path and the harbor" }],
+      },
+    ],
+  },
+  {
+    path: "/stay",
+    title: "Stay",
+    description: "RV parking, tent camping, and holiday cabins on Raippaluoto.",
+    kicker: "Raippaluoto",
+    lede: "A camper at the harbor, a tent in a sauna yard, or a cabin with bunks. The island is not a hotel strip.",
+    crumbs: [homeCrumb, stay],
+    map: categoryMap("Places to stay on Raippaluoto", "holiday-cabins"),
+    blocks: [],
+    cards: stayCards,
+    cardsHeading: "Ways to stay",
+  },
+  {
+    path: "/stay/rv-camping",
+    title: "RV camping",
+    description: "RV parking on Raippaluoto, including Klobbskat harbor.",
+    kicker: "Stay",
+    lede: "Klobbskat harbor has RV parking, out at the quiet end of the island. The map shows the other camper spots in Mustasaari, framed on Raippaluoto.",
+    crumbs: [homeCrumb, stay, { href: "/stay/rv-camping", label: "RV camping" }],
+    map: categoryMap("RV parks on Raippaluoto", "rv-parks"),
+    blocks: [
+      {
+        kind: "links",
+        items: [{ href: "/saunas/klobbskat", title: "Klobbskat", text: "The harbor, the sauna, and the gazebo." }],
+      },
+    ],
+  },
+  {
+    path: "/stay/tent-camping",
+    title: "Tent camping",
+    description: "Tent camping on Raippaluoto, including the yard at Sommarö sauna.",
+    kicker: "Stay",
+    lede: "At Sommarö sauna you may pitch a tent in the yard. You may not sleep in the buildings. Other tent spots on the island are on the map.",
+    crumbs: [homeCrumb, stay, { href: "/stay/tent-camping", label: "Tent camping" }],
+    map: categoryMap("Tent camping on Raippaluoto", "tents"),
+    blocks: [
+      {
+        kind: "links",
+        items: [{ href: "/saunas/sommaro", title: "Sommarö sauna" }],
+      },
+    ],
+  },
+  {
+    path: "/stay/holiday-homes",
+    title: "Holiday homes",
+    description: "Holiday cabins on Raippaluoto, including Björkören and Sommarön vartiotupa.",
+    kicker: "Stay",
+    lede: "Two cabins are already worth knowing. Björkören is a small Metsähallitus rental with a sauna. Sommarön vartiotupa sleeps a much larger group.",
+    crumbs: [homeCrumb, stay, { href: "/stay/holiday-homes", label: "Holiday homes" }],
+    map: categoryMap("Holiday cabins on Raippaluoto", "holiday-cabins"),
+    blocks: [
+      {
+        kind: "links",
+        items: [
+          { href: "/saunas/bjorkoren", title: "Björkören", text: "180 euros a day. Bunks, kitchen, fireplaces, sauna." },
+          { href: "/huts/sommaron-guard-hut", title: "Sommarön vartiotupa", text: "Up to 22 people, with a sauna, on the Sommarö trails." },
+        ],
+      },
+    ],
+  },
+  {
+    path: "/eat-and-drink",
+    title: "Eat & drink",
+    description: "Eating and drinking on Raippaluoto.",
+    kicker: "Raippaluoto",
+    lede: "The island is not a restaurant town. A few places cluster at Klobbskat, and the map shows what else is listed in Mustasaari.",
+    crumbs: [homeCrumb, eat],
+    map: categoryMap("Restaurants on Raippaluoto", "restaurants"),
+    blocks: [],
+    cards: eatCards,
+  },
+  {
+    path: "/eat-and-drink/restaurants",
+    title: "Restaurants & cafes",
+    description: "Café Kompass, Kvarken Brewery, and Kalle’s Inn at Klobbskat, and other places to eat on the map.",
+    kicker: "Eat & drink",
+    lede: "At Klobbskat harbor, Café Kompass is nearby, Kvarken Brewery makes its beer, and Kalle’s Inn is the polished stay. More places to eat are on the map as they are added.",
+    crumbs: [homeCrumb, eat, { href: "/eat-and-drink/restaurants", label: "Restaurants & cafes" }],
+    map: categoryMap("Restaurants and cafes on Raippaluoto", "restaurants"),
+    blocks: [
+      {
+        kind: "links",
+        items: [{ href: "/hiking/kikanberget", title: "Klobbskat and Kikanberget" }],
+      },
+    ],
+  },
+  {
+    path: "/events",
+    title: "Events",
+    description: "Events on Raippaluoto.",
+    kicker: "Raippaluoto",
+    lede: "There is no event calendar here yet. Wednesday sauna at Sommarösund is the regular gathering: women from 17.30 to 19.30, men from 19.30 to 22.00, three euros.",
+    crumbs: [homeCrumb, { href: "/events", label: "Events" }],
+    blocks: [
+      {
+        kind: "links",
+        items: [{ href: "/saunas/sommarosund", title: "Sommarösund sauna" }],
+      },
+      { kind: "a", href: businessPlot, label: "Business plots in Raippaluoto" },
+    ],
+  },
+];
+
+const byPath = new Map(guides.map((guide) => [guide.path, guide]));
+
+if (byPath.size !== guides.length) {
+  throw new Error("Duplicate guide path");
+}
+
+export function getGuide(slug: string[]): Guide | undefined {
+  return byPath.get(`/${slug.join("/")}`);
+}
+
+export function allGuides(): Guide[] {
+  return guides;
+}
