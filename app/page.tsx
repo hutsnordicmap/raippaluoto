@@ -51,6 +51,19 @@ export default function HomePage() {
 
       <main>
         <section className="mx-auto max-w-6xl px-5 py-16">
+          <p className="text-sm text-muted">The record</p>
+          <h2 className="mt-2 max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl">
+            The island, in the sources
+          </h2>
+          <p className="mt-4 max-w-xl text-lg leading-8">
+            The bridge, the rising land, and the municipality. Written from Mustasaari, UNESCO, and Statistics Finland, separate from the maps.
+          </p>
+          <Link href="/the-island" className="mt-6 inline-block font-medium underline underline-offset-4">
+            Read the island
+          </Link>
+        </section>
+
+        <section className="mx-auto max-w-6xl px-5 pb-16">
           <p className="text-sm text-muted">Places to go</p>
           <h2 className="mt-2 max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl">
             Five ways onto the island

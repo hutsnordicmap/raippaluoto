@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { allGuides } from "@/app/content/guides";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date("2026-10-21");
+  const lastModified = new Date("2026-10-23");
   return [
     {
       url: "https://raippaluoto.fi/",

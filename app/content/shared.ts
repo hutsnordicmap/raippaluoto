@@ -105,6 +105,7 @@ export function routeMap(
 }
 
 export const nav = [
+  { href: "/the-island", label: "The island" },
   { href: "/places", label: "Places to go" },
   { href: "/see-and-do", label: "See & do" },
   { href: "/stay", label: "Stay" },

@@ -129,6 +129,131 @@ const ferryNote =
 
 export const guides: Guide[] = [
   {
+    path: "/the-island",
+    title: "The island",
+    description:
+      "Sourced notes on Raippaluoto: the names, the bridge, the rising land, and the municipality of Mustasaari.",
+    kicker: "Raippaluoto",
+    lede: "The maps on this site come from Huts.fi. This page is the rest: what the municipality, UNESCO, and Statistics Finland actually publish about the island.",
+    crumbs: [homeCrumb, { href: "/the-island", label: "The island" }],
+    map: areaMap("Map of Raippaluoto", "63.260000", "21.290000", "9.50"),
+    facts: [
+      { label: "Finnish name", value: "Raippaluoto" },
+      { label: "Swedish name", value: "Replot" },
+      { label: "Municipality", value: "Mustasaari (Korsholm)" },
+      { label: "Region", value: "Ostrobothnia" },
+      { label: "Road bridge", value: "1,045 m, opened 27 August 1997" },
+      { label: "World Heritage", value: "Kvarken Archipelago, added in 2006" },
+    ],
+    blocks: [
+      { kind: "h2", text: "Two names" },
+      {
+        kind: "p",
+        text: "Raippaluoto is the Finnish name. Replot is the Swedish one. Both are in daily use, because Mustasaari is a Swedish-speaking municipality that also uses the name Korsholm. The road bridge is Raippaluodon silta in Finnish and Replotbron in Swedish.",
+      },
+      {
+        kind: "p",
+        text: "Today’s Mustasaari was formed in 1973, when five municipalities merged: Björköby, Korsholm, Kvevlax, Replot, and Solf. In Finnish those are Björköby, Mustasaari, Koivulahti, Raippaluoto, and Sulva. Replot had been its own municipality until that date. The municipality now reports about 19,800 inhabitants, of whom 69 percent have Swedish and 29 percent Finnish as their mother tongue. That split is for the whole municipality, not a separate census of the island.",
+      },
+      { kind: "h2", text: "How many people live here" },
+      {
+        kind: "p",
+        text: "There is no single official headcount published for “the island of Raippaluoto” as one area. Statistics Finland counts people by postal area. In 2024 the postal area 65800 Raippaluoto had 841 residents. That area is the Replot village postcode. It is not Vallgrund, and it is not Björköby. A round number for the whole archipelago would mix those areas together, so this site does not invent one.",
+      },
+      { kind: "h2", text: "The bridge" },
+      {
+        kind: "p",
+        text: "The Replot Bridge is a cable-stayed road bridge with two pylons. Mustasaari gives the measurements: 1,045 metres long, 64 cables, the longest of them 127 metres, a main span of 250 metres with 26 metres of clearance, and pylons 82.5 metres above the water. It was opened on 27 August 1997. From then until 2026 it was Finland’s longest bridge.",
+      },
+      {
+        kind: "p",
+        text: "On 18 April 2026 Helsinki opened the Kruunuvuori Bridge, 1,191 metres, and Yle reported that it took the title. That bridge is for walking, cycling, and trams. Cars are not allowed on it. The drive onto Raippaluoto is still the Replot Bridge. Mustasaari’s own page has not yet caught up: it still calls this Finland’s longest bridge.",
+      },
+      { kind: "h2", text: "The land is still rising" },
+      {
+        kind: "p",
+        text: "The north end of the islands is part of a UNESCO World Heritage property shared with Sweden. Its name is High Coast / Kvarken Archipelago. The World Heritage Committee added the Kvarken Archipelago in 2006, extending the High Coast, which was already on the list. UNESCO describes about 5,600 islands, and about 290 metres of uplift over the past 10,500 years. The rise has not stopped.",
+      },
+      {
+        kind: "p",
+        text: "The world-heritage managers put the recent pace at about 0.9 metres a century, which is fast enough to notice in a lifetime. Mustasaari says the municipality’s land area grows by about 20 hectares a year because of that uplift. The 20 hectares are for all of Mustasaari, not for Raippaluoto alone.",
+      },
+      {
+        kind: "p",
+        text: "The shape of the north end is a field of De Geer moraines. They are named for the geologist Gerard De Geer, who first described them. The world-heritage site says the ridges sit 50 to 200 metres apart, and that one ridge can run for up to a kilometre and stand two to five metres high. They formed on the sea floor at the edge of the inland ice. The same site says the ice over this coast was about 3,000 metres thick at its maximum, 18,000 years ago. The ridges are easiest to see where they still stand in the water, at Svedjehamn, on the walk out from Björköby.",
+      },
+      { kind: "h2", text: "The villages on the record" },
+      {
+        kind: "p",
+        text: "The National Library of Finland’s place vocabulary lists the villages on Replot as Replot, Södra Vallgrund (with the hamlet Kalvholmen), Norra Vallgrund, Brändövik, Söderudden, Panike, and Vistan. Björkö, with the village Björköby, lies to the north. Those are recorded place names, not a ranking of which village matters. The guides on this site cover the ones a visitor actually asks for.",
+      },
+      { kind: "h2", text: "What this site will not pretend to know" },
+      {
+        kind: "p",
+        text: "Beach amenities, a full restaurant list, a bike-route guide, and an events calendar are not here unless someone has published them and we can point at that page. Saunas, trails, and harbours are on the maps from Huts.fi. If a number on this page and a number on the municipality’s own site ever disagree, the municipality is the one to trust, and this page should be corrected.",
+      },
+      { kind: "h2", text: "Sources" },
+      {
+        kind: "links",
+        items: [
+          {
+            href: "https://en.korsholm.fi/municipality/facts-about-the-municipality",
+            title: "Mustasaari: facts about the municipality",
+            text: "The 1973 merger, population, languages, and the 20 hectares of new land a year.",
+          },
+          {
+            href: "https://mustasaari.fi/kunta/matkailu/nahtavyydet/raippaluodon-silta",
+            title: "Mustasaari: Raippaluodon silta",
+            text: "Length, cables, span, clearance, pylons, and the opening date.",
+          },
+          {
+            href: "https://yle.fi/a/74-20220786",
+            title: "Yle, 18 April 2026: Finland’s longest bridge opens in Helsinki",
+            text: "The Kruunuvuori Bridge, 1,191 metres, and the title it took from Replot.",
+          },
+          {
+            href: "https://www.hel.fi/fi/uutiset/sillalla-tavataan-lauantaina-18-huhtikuuta-oma-kruunu-paahan",
+            title: "City of Helsinki: the opening day",
+            text: "Walking and cycling from 18 April 2026. No cars.",
+          },
+          {
+            href: "https://whc.unesco.org/en/list/898/",
+            title: "UNESCO: High Coast / Kvarken Archipelago",
+            text: "The 5,600 islands, and about 290 metres of uplift in 10,500 years.",
+          },
+          {
+            href: "https://whc.unesco.org/en/decisions/996/",
+            title: "UNESCO decision, 2006",
+            text: "The meeting that added the Kvarken Archipelago to the World Heritage List.",
+          },
+          {
+            href: "https://highcoastkvarken.org/our-joint-world-heritage/traces-of-the-ice/",
+            title: "High Coast / Kvarken: traces of the ice",
+            text: "De Geer moraines, and where to see them at Svedjehamn.",
+          },
+          {
+            href: "https://tilastokone.fi/en/municipalities/mustasaari/65800/",
+            title: "Statistics Finland, Paavo 2024: postal area 65800",
+            text: "841 residents. This is the Replot postcode, not the whole island.",
+          },
+          {
+            href: "https://finto.fi/yso-paikat/se/page/p105764",
+            title: "National Library of Finland: Replot",
+            text: "The Swedish entry lists the village names, and the merger into Korsholm in 1973.",
+          },
+        ],
+      },
+      {
+        kind: "links",
+        items: [
+          { href: "/places/replot-bridge", title: "Replot Bridge", text: "The crossing, and the beach just before it." },
+          { href: "/places/kvarken", title: "Kvarken Archipelago", text: "The north end, and the walks from Björköby." },
+          { href: "/places", title: "Places to go", text: "The villages." },
+        ],
+      },
+    ],
+  },
+  {
     path: "/places",
     title: "Places to go",
     description: "Villages and landscapes on Raippaluoto: Norra Vallgrund, Södra Vallgrund, Björköby, the bridge, and Kvarken.",
@@ -245,14 +370,35 @@ export const guides: Guide[] = [
     title: "Replot Bridge",
     description: "The bridge onto Raippaluoto, and the beach just before the crossing.",
     kicker: "Places to go",
-    lede: "The Replot Bridge is the drive onto the island. Fjärdskär beach sits on the mainland side, just before you cross.",
+    lede: "The Replot Bridge is the drive onto the island. It is 1,045 metres long and opened on 27 August 1997. Fjärdskär beach sits on the mainland side, just before you cross.",
     crumbs: [homeCrumb, places, { href: "/places/replot-bridge", label: "Replot Bridge" }],
+    facts: [
+      { label: "Length", value: "1,045 m" },
+      { label: "Opened", value: "27 August 1997" },
+      { label: "Main span", value: "250 m, with 26 m of clearance" },
+      { label: "Pylons", value: "82.5 m, held by 64 cables" },
+    ],
     map: {
       title: "Map of the Replot Bridge",
       href: cityMap,
       src: "https://www.huts.fi/embed/finland/ostrobothnia/mustasaari/bridges?trails=1&address=1&lat=63.208000&lng=21.470000&zoom=12.80",
     },
     blocks: [
+      {
+        kind: "p",
+        text: "Mustasaari’s figures: a cable-stayed bridge, two pylons, 64 cables of which the longest is 127 metres. It was Finland’s longest bridge until 18 April 2026, when Helsinki opened the Kruunuvuori Bridge for walking, cycling, and trams. Cars still cross to the island here.",
+      },
+      {
+        kind: "links",
+        items: [
+          { href: "/the-island", title: "The island", text: "The sourced account of the bridge, the land uplift, and the municipality." },
+        ],
+      },
+      {
+        kind: "a",
+        href: "https://mustasaari.fi/kunta/matkailu/nahtavyydet/raippaluodon-silta",
+        label: "Mustasaari on the bridge",
+      },
       {
         kind: "a",
         href: "https://mustasaari.fi/2023/04/infotilaisuus-raippaluodon-sillan-uudesta-valaistuksesta-2",
