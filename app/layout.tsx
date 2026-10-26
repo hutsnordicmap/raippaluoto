@@ -1,11 +1,16 @@
 import type { Metadata } from "next";
-import { Outfit } from "next/font/google";
+import { Archivo, Outfit } from "next/font/google";
 import { Footer, Header } from "@/app/components/Chrome";
 import "./globals.css";
 
 const outfit = Outfit({
   subsets: ["latin", "latin-ext"],
   variable: "--font-outfit",
+});
+
+const archivo = Archivo({
+  subsets: ["latin", "latin-ext"],
+  variable: "--font-archivo",
 });
 
 export const metadata: Metadata = {
@@ -25,10 +30,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${outfit.variable} h-full antialiased`}>
-      <body className="min-h-full bg-white font-sans text-ink">
+    <html lang="en" className={`${outfit.variable} ${archivo.variable} h-full antialiased`}>
+      <body className="flex min-h-screen flex-col bg-black font-sans text-white">
         <Header />
-        {children}
+        <div className="flex-1">{children}</div>
         <Footer />
       </body>
     </html>

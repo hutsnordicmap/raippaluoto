@@ -41,6 +41,11 @@ const placeCards: Card[] = [
     title: "Kvarken Archipelago",
     text: "A world heritage landscape at the north end of the island.",
   },
+  {
+    href: "/places/parking",
+    title: "Where to park",
+    text: "Free lots at the trailheads, and the sports field in Replot.",
+  },
 ];
 
 const seeCards: Card[] = [
@@ -81,8 +86,23 @@ const seeCards: Card[] = [
   },
   {
     href: "/towers",
-    title: "Observation towers",
-    text: "Saltkaret on the Bodvattnet loop, and Kikanberget by the harbor.",
+    title: "Towers & viewpoints",
+    text: "Saltkaret, Kikanberget, and two viewing terraces.",
+  },
+  {
+    href: "/disc-golf",
+    title: "Disc golf",
+    text: "A ten-hole course in Norra Vallgrund, looked after by IF Kvarken.",
+  },
+  {
+    href: "/fishing",
+    title: "Fishing & piers",
+    text: "Shore fishing at the bridge, and the piers along the trails.",
+  },
+  {
+    href: "/sports",
+    title: "Sports",
+    text: "School gyms, ball fields, hockey rinks, and the outdoor gyms.",
   },
 ];
 
@@ -100,7 +120,7 @@ const stayCards: Card[] = [
   {
     href: "/stay/holiday-homes",
     title: "Holiday homes",
-    text: "Rentable cabins, including Björkören and Sommarön vartiotupa.",
+    text: "Five holiday cabins on the island, plus two wilderness rentals.",
   },
 ];
 
@@ -108,7 +128,12 @@ const eatCards: Card[] = [
   {
     href: "/eat-and-drink/restaurants",
     title: "Restaurants & cafes",
-    text: "Café Kompass, Kvarken Brewery, and Kalle’s Inn at Klobbskat.",
+    text: "Café Kompass and Kalle’s Inn at Klobbskat.",
+  },
+  {
+    href: "/eat-and-drink/kvarken-brewery",
+    title: "Kvarken Brewery",
+    text: "A gastropub and pizzeria on Replotvägen in Replot.",
   },
 ];
 
@@ -186,6 +211,15 @@ export const guides: Guide[] = [
       {
         kind: "p",
         text: "The National Library of Finland’s place vocabulary lists the villages on Replot as Replot, Södra Vallgrund (with the hamlet Kalvholmen), Norra Vallgrund, Brändövik, Söderudden, Panike, and Vistan. Björkö, with the village Björköby, lies to the north. Those are recorded place names, not a ranking of which village matters. The guides on this site cover the ones a visitor actually asks for.",
+      },
+      { kind: "h2", text: "Where to park" },
+      {
+        kind: "p",
+        text: "Huts maps three free lots at the trailheads: Kvarken in Björköby, Sommarö in Södra Vallgrund, and Vargis in Panike. The sports field in Replot is the lot for the lit ski track.",
+      },
+      {
+        kind: "links",
+        items: [{ href: "/places/parking", title: "Where to park" }],
       },
       { kind: "h2", text: "What this site will not pretend to know" },
       {
@@ -282,6 +316,7 @@ export const guides: Guide[] = [
           { href: "/saunas/norra-vallgrund-beach", title: "Beach sauna", text: "10 euros. Firewood included." },
           { href: "/kayaking/djupskaret", title: "Kayak to Djupskäret sauna", text: "From the beach to the free sauna on Djupskäret." },
           { href: "/kayaking/sommaro", title: "Kayak to Sommarö laavu", text: "The same line can be skied in a cold winter, once the ice is thick." },
+          { href: "/disc-golf", title: "Disc golf", text: "A ten-hole course in the village, looked after by IF Kvarken." },
         ],
       },
       { kind: "h2", text: "On the ice" },
@@ -392,6 +427,7 @@ export const guides: Guide[] = [
         kind: "links",
         items: [
           { href: "/the-island", title: "The island", text: "The sourced account of the bridge, the land uplift, and the municipality." },
+          { href: "/fishing", title: "Fishing at the bridge", text: "A shore spot on the crossing, plus the piers elsewhere on the island." },
         ],
       },
       {
@@ -449,7 +485,7 @@ export const guides: Guide[] = [
   {
     path: "/see-and-do",
     title: "See & do",
-    description: "Saunas, beaches, trails, huts, kayaking, biking, and towers on Raippaluoto.",
+    description: "Saunas, beaches, trails, huts, kayaking, disc golf, fishing, sports, and towers on Raippaluoto.",
     kicker: "Raippaluoto",
     lede: "The island is small enough to learn in a few days. Most of what people come for is outdoors: a sauna, a beach, a loop in the woods, or the archipelago.",
     crumbs: [homeCrumb, see],
@@ -822,6 +858,8 @@ export const guides: Guide[] = [
         items: [
           { href: "/saunas/sommarosund", title: "Sommarösund sauna" },
           { href: "/huts/sommaron-guard-hut", title: "Sommarön vartiotupa" },
+          { href: "/towers/sommaro", title: "Sommarö viewing terrace", text: "An accessible terrace on these trails, kept by Metsähallitus." },
+          { href: "/places/parking", title: "Sommarö parking" },
         ],
       },
     ],
@@ -885,6 +923,13 @@ export const guides: Guide[] = [
         text: "The other crossing is at Rotörskatan. The city does not run a ferry there, so you use a private boat taxi. Two are recommended: Neptune Service, and Ulf Rönnblad, +358 500 163 021, ulf.ronnblad@netikka.fi.",
       },
       { kind: "a", href: "https://neptune-service.fi", label: "Neptune Service" },
+      {
+        kind: "links",
+        items: [
+          { href: "/huts/bullrikoren", title: "Bullrikören laavu", text: "A free lean-to at the midpoint of this trail." },
+          { href: "/fishing", title: "Piers on the route" },
+        ],
+      },
     ],
   },
   {
@@ -922,13 +967,15 @@ export const guides: Guide[] = [
     blocks: [
       {
         kind: "p",
-        text: "Two places for a fire sit near the parking lot: Vargis laavu, and a Vargis open hut. Vaasan Kajakkivuokraus rents kayaks from here. Björkören, the Metsähallitus cabin with a sauna, is very close.",
+        text: "Two places for a fire sit near the parking lot: Vargis laavu, and a Vargis open hut. Vaasan Kajakkivuokraus hires kayaks from here, listed from 25 euros, May through October. Björkören, the Metsähallitus cabin with a sauna, is very close. Kvicksund viewing terrace is on this west side.",
       },
       {
         kind: "links",
         items: [
           { href: "/huts/vargis", title: "Vargis laavu" },
           { href: "/saunas/bjorkoren", title: "Björkören" },
+          { href: "/towers/kvicksund", title: "Kvicksund viewing terrace" },
+          { href: "/places/parking", title: "Vargis parking" },
         ],
       },
     ],
@@ -944,7 +991,7 @@ export const guides: Guide[] = [
     blocks: [
       {
         kind: "p",
-        text: "Café Kompass is nearby. The Kikanberget observation tower is at the start. In the harbor there is RV parking, an outdoor grill the city sometimes stocks with wood, a glass Klobbskat gazebo with a grill overlooking the water, and the Klobbskat sauna. Kvarken Brewery makes its beer here, and Kalle’s Inn is here.",
+        text: "Café Kompass is nearby. The Kikanberget observation tower is at the start. In the harbor there is RV parking, an outdoor grill the city sometimes stocks with wood, a glass Klobbskat gazebo with a grill overlooking the water, and the Klobbskat sauna. Kalle’s Inn is here. Kvarken Brewery is on Replotvägen in Replot, not at this harbor.",
       },
       {
         kind: "links",
@@ -952,6 +999,8 @@ export const guides: Guide[] = [
           { href: "/towers/kikanberget", title: "Kikanberget tower" },
           { href: "/saunas/klobbskat", title: "Klobbskat sauna" },
           { href: "/eat-and-drink/restaurants", title: "Eat & drink" },
+          { href: "/eat-and-drink/kvarken-brewery", title: "Kvarken Brewery" },
+          { href: "/stay/holiday-homes/kalles-inn", title: "Kalle’s Inn" },
         ],
       },
     ],
@@ -1035,6 +1084,10 @@ export const guides: Guide[] = [
         kind: "p",
         text: "Villages and local groups also build huts and leave them open. An outdoor grill, a nuotiopaikka, is only the fire itself: a ring, often picnic benches, often free wood, sometimes an ax or a saw.",
       },
+      {
+        kind: "p",
+        text: "The map also shows rest stops that do not have their own page yet: Långgrund and the Bodvattnet circuit stop in Björköby, Stora Segelsören on the Björkö–Panike route, and the grill kota at Sommarösund beach.",
+      },
     ],
     cardsHeading: "Places",
     cards: [
@@ -1043,6 +1096,7 @@ export const guides: Guide[] = [
       { href: "/huts/sommaron-guard-hut", title: "Sommarön vartiotupa", text: "A rental hut for up to 22, with a sauna." },
       { href: "/huts/vargis", title: "Vargis laavu", text: "By the Vargis parking lot, with a second open hut." },
       { href: "/huts/marraryggen", title: "Märraryggen", text: "The outdoor grill on the Bodvattnet loop." },
+      { href: "/huts/bullrikoren", title: "Bullrikören laavu", text: "A free lean-to at the midpoint of Björkö to Panike." },
     ],
   },
   {
@@ -1143,9 +1197,14 @@ export const guides: Guide[] = [
     map: categoryMap("Kayaking routes on Raippaluoto", "kayaking-routes", "kayaking-routes", "63.173000", "21.320000", "12.80"),
     blocks: [
       {
-        kind: "p",
-        text: "Vaasan Kajakkivuokraus rents kayaks at Vargis. From the Vikarskat harbor you can also paddle to Finnhamnen.",
+        kind: "h2",
+        text: "Where to rent a kayak",
       },
+      {
+        kind: "p",
+        text: "Vaasan Kajakkivuokraus hires Oasis 430 kayaks from the Vargis hiking site in Panike. Huts lists them from 25 euros. Their season is May through October, and you book ahead online or by phone, +358 40 505 5665. From Vikarskat you can also paddle to Finnhamnen.",
+      },
+      { kind: "a", href: "https://www.vaasankajakkivuokraus.fi/fi/vuokraus-hinnat", label: "Rental prices" },
     ],
     cardsHeading: "Routes",
     cards: [
@@ -1162,6 +1221,15 @@ export const guides: Guide[] = [
     crumbs: [homeCrumb, see, { href: "/kayaking", label: "Kayaking" }, { href: "/kayaking/djupskaret", label: "Djupskäret" }],
     map: routeMap("Kayak to Djupskäret", "kayaking-routes", "kayak-to-djupskaret-sauna"),
     blocks: [
+      {
+        kind: "h2",
+        text: "Where to rent a kayak",
+      },
+      {
+        kind: "p",
+        text: "Vaasan Kajakkivuokraus hires Oasis 430 kayaks from the Vargis hiking site in Panike, not from this beach. Huts lists them from 25 euros, May through October. Book ahead, +358 40 505 5665.",
+      },
+      { kind: "a", href: "https://www.vaasankajakkivuokraus.fi/fi/", label: "Vaasan Kajakkivuokraus" },
       {
         kind: "links",
         items: [{ href: "/saunas/djupskaret", title: "Djupskäret sauna" }],
@@ -1181,6 +1249,15 @@ export const guides: Guide[] = [
         kind: "p",
         text: "Do not treat the ice as safe because the route exists. Currents farther out keep some ice thin. Go when you can see that people from the village are already out.",
       },
+      {
+        kind: "h2",
+        text: "Where to rent a kayak",
+      },
+      {
+        kind: "p",
+        text: "Vaasan Kajakkivuokraus hires Oasis 430 kayaks from the Vargis hiking site in Panike. Huts lists them from 25 euros, May through October. Book ahead, +358 40 505 5665.",
+      },
+      { kind: "a", href: "https://www.vaasankajakkivuokraus.fi/fi/", label: "Vaasan Kajakkivuokraus" },
       {
         kind: "links",
         items: [{ href: "/huts/sommaro-laavu", title: "Sommarö laavu" }],
@@ -1203,17 +1280,19 @@ export const guides: Guide[] = [
   },
   {
     path: "/towers",
-    title: "Observation towers",
-    description: "Saltkaret and Kikanberget, the two observation towers to know on Raippaluoto.",
+    title: "Towers & viewpoints",
+    description: "Saltkaret, Kikanberget, and the viewing terraces at Kvicksund and Sommarö.",
     kicker: "Nature & exercise",
-    lede: "Two towers are worth the detour. Saltkaret is on the Bodvattnet loop. Kikanberget is at the start of the short path by Klobbskat harbor.",
+    lede: "Two towers are worth the detour. Saltkaret is on the Bodvattnet loop. Kikanberget is at the start of the short path by Klobbskat harbor. Metsähallitus also keeps viewing terraces at Kvicksund and Sommarö.",
     crumbs: [homeCrumb, see, { href: "/towers", label: "Observation towers" }],
     map: categoryMap("Observation towers on Raippaluoto", "viewpoints"),
     blocks: [],
-    cardsHeading: "Towers",
+    cardsHeading: "Places",
     cards: [
       { href: "/towers/saltkaret", title: "Saltkaret", text: "The bird tower on Bodvattnet runt." },
       { href: "/towers/kikanberget", title: "Kikanberget", text: "At the harbor end of a 15-minute path." },
+      { href: "/towers/kvicksund", title: "Kvicksund", text: "A viewing terrace on the west side, near the Vargis walks." },
+      { href: "/towers/sommaro", title: "Sommarö", text: "An accessible viewing terrace on the Sommarö trails." },
     ],
   },
   {
@@ -1247,11 +1326,212 @@ export const guides: Guide[] = [
     ],
   },
   {
+    path: "/disc-golf",
+    title: "Disc golf",
+    description: "A ten-hole disc golf course in Norra Vallgrund, looked after by IF Kvarken.",
+    kicker: "See & do",
+    lede: "Norra Vallgrund has a ten-hole course, looked after by IF Kvarken. Mustasaari publishes it as free.",
+    crumbs: [homeCrumb, see, { href: "/disc-golf", label: "Disc golf" }],
+    map: categoryMap("Disc golf in Norra Vallgrund", "disc-golf-courses", "disc-golf-courses", "63.187000", "21.297000", "13.00"),
+    facts: [
+      { label: "Holes", value: "10" },
+      { label: "Address", value: "Storkärrtået 63, Norra Vallgrund" },
+      { label: "Price", value: "Free" },
+    ],
+    blocks: [
+      {
+        kind: "links",
+        items: [{ href: "/places/norra-vallgrund", title: "Norra Vallgrund" }],
+      },
+      {
+        kind: "a",
+        href: "https://mustasaari.fi/hyvinvointi/vapaa-aikatoiminta/frisbeegolf/norra-vallgrundin-frisbeegolfrata",
+        label: "Mustasaari on the course",
+      },
+    ],
+  },
+  {
+    path: "/fishing",
+    title: "Fishing & piers",
+    description: "Shore fishing at the Replot Bridge, and the piers mapped on Raippaluoto.",
+    kicker: "See & do",
+    lede: "The mapped fishing spot is the shore at the Replot Bridge. The piers are landings along the trails, not a second set of fishing spots.",
+    crumbs: [homeCrumb, see, { href: "/fishing", label: "Fishing & piers" }],
+    map: categoryMap("Piers on Raippaluoto", "boat-launches"),
+    blocks: [
+      { kind: "h2", text: "The bridge" },
+      {
+        kind: "p",
+        text: "Huts lists shore fishing from the Replot Bridge. A national fisheries management fee is the usual requirement for that kind of fishing. This page does not set a local price.",
+      },
+      {
+        kind: "links",
+        items: [{ href: "/places/replot-bridge", title: "Replot Bridge" }],
+      },
+      { kind: "a", href: "https://www.eraluvat.fi/kalastus/kalastonhoitomaksu", label: "Fisheries management fee" },
+      { kind: "h2", text: "Piers" },
+      {
+        kind: "p",
+        text: "Stora Segelsören, Rotörskatan, and the Långgrund floating jetty are landings on the Björkö–Panike route. Björkören has a canoe jetty at the rental cabin. Vargis has a paddling pier and a shore crossing in the yard at Panike. Sommarö has a landing at the old fortress area in Södra Vallgrund.",
+      },
+      {
+        kind: "links",
+        items: [
+          { href: "/hiking/bjorko-panike", title: "Björkö to Panike" },
+          { href: "/hiking/vargis", title: "Vargis" },
+          { href: "/saunas/bjorkoren", title: "Björkören" },
+          { href: "/hiking/sommaron", title: "Sommarö trails" },
+        ],
+      },
+    ],
+  },
+  {
+    path: "/sports",
+    title: "Sports",
+    description: "School gyms, ball fields, hockey rinks, outdoor gyms, and courts on Raippaluoto.",
+    kicker: "See & do",
+    lede: "The island’s sports places are municipal or school yards, plus one private gym and a club shooting range. Most of the outdoor ones are free.",
+    crumbs: [homeCrumb, see, { href: "/sports", label: "Sports" }],
+    blocks: [
+      { kind: "h2", text: "Replot" },
+      {
+        kind: "p",
+        text: "The school yard at Kyrkvägen 84 has a match-size outdoor hockey rink, about 60 by 30 metres. Mustasaari lists general skating on weekdays from 16.00 to 19.00, and all day on weekends. The same yard has a school skating rink, used by the school on school days and open for public skating in the evenings and on weekends when the ice is in. There is a gravel ball field, about 60 by 40 metres, and a gravel panna-football court.",
+      },
+      {
+        kind: "p",
+        text: "The school gym is at Kyrkvägen 94. Mustasaari lists a wood floor and a court about 20 by 10 metres, booked through the municipality. The grass field at Vallgrundintie 50 has high jump, long jump, a shot-put circle, and a sprint track, and it is also the lot for the lit ski track. The outdoor gym at Vallgrundvägen 50 is free. Beach volleyball is at Raippaluoto beach, Kyläsatamantie 200.",
+      },
+      {
+        kind: "p",
+        text: "Amazing Family Gym, Vallgrundvägen 78, is a private gym. Members can train around the clock, and customer service is on Thursdays from 16.00 to 18.00. Membership is listed from 38 euros. Phone +358 50 521 8736.",
+      },
+      {
+        kind: "links",
+        items: [
+          { href: "/ski-trails/raippaluoto", title: "The lit ski track" },
+          { href: "/beaches/raippaluoto", title: "Raippaluoto beach" },
+        ],
+      },
+      { kind: "a", href: "https://www.amazing-gym.com/raipaluoto", label: "Amazing Family Gym" },
+      { kind: "h2", text: "Norra Vallgrund" },
+      {
+        kind: "p",
+        text: "Vallgrund school has a gravel ball field and an outdoor hockey rink at Söderuddsvägen 9. The rink is about 60 by 30 metres. School use is on weekdays, and evenings and weekends are for free skating and pickup hockey. The school gym is the smaller hall at Söderuddsvägen 2, booked through the municipality. Beach volleyball is at Sommarösund beach.",
+      },
+      {
+        kind: "links",
+        items: [{ href: "/beaches/sodra-vallgrund", title: "Södra Vallgrund beaches" }],
+      },
+      { kind: "h2", text: "Björköby" },
+      {
+        kind: "p",
+        text: "The outdoor gym at Björköntie 735 is free. A smaller hockey rink, about 40 by 20 metres, is on Kråkbosletvägen. A local association puts the ice in, and it is not on the main-rink skating schedule. The grass field at Sundesvägen 13 has high jump, long jump, a sprint track, a shot-put circle, and a beach-volleyball court.",
+      },
+      {
+        kind: "p",
+        text: "Folkhälsan i Björköby keeps an indoor gym at Björkövägen 768. The association says it is open year-round, and access is through a membership. Phone +358 50 464 8260.",
+      },
+      { kind: "a", href: "https://www.folkhalsan.fi/halsoframjande-arbete/foreningsverksamhet/lokalforeningar/folkhalsan-i-bjorkoby", label: "Folkhälsan i Björköby" },
+      { kind: "h2", text: "A club shooting range" },
+      {
+        kind: "p",
+        text: "Skärgårdens skjutbana is an outdoor range at Vallgrundvägen 305, looked after by hunting clubs in Replot. It is not a public field. Phone +358 50 918 0220.",
+      },
+      { kind: "a", href: "https://www.sodravallgrund.fi/jaktforeningen/skjutbanan/", label: "Södra Vallgrund hunting club" },
+      {
+        kind: "a",
+        href: "https://mustasaari.fi/hyvinvointi/urheilutoiminta/liikuntapaikat/kaukalot-ja-jaaradat",
+        label: "Mustasaari on the rinks",
+      },
+    ],
+  },
+  {
+    path: "/places/parking",
+    title: "Where to park",
+    description: "Free parking at the Kvarken, Sommarö, and Vargis trailheads, and the sports field in Replot.",
+    kicker: "Places to go",
+    lede: "Three free lots are mapped for the trailheads. The sports field in Replot is the one for the lit ski track.",
+    crumbs: [homeCrumb, places, { href: "/places/parking", label: "Where to park" }],
+    map: categoryMap("Free parking on Raippaluoto", "free-parking"),
+    blocks: [
+      {
+        kind: "p",
+        text: "Kvarken parking is in Björköby, for the north-end walks. Sommarö parking is in Södra Vallgrund, for the Sommarö trails. Vargis parking is in Panike, kept by Metsähallitus, for the Vargis trail and the kayak rental.",
+      },
+      {
+        kind: "p",
+        text: "The lit ski track uses the sports field at Vallgrundintie 50, 65800 Raippaluoto. That lot is not one of the three free-parking pins.",
+      },
+      {
+        kind: "links",
+        items: [
+          { href: "/places/kvarken", title: "Kvarken Archipelago" },
+          { href: "/hiking/sommaron", title: "Sommarö trails" },
+          { href: "/hiking/vargis", title: "Vargis" },
+          { href: "/ski-trails/raippaluoto", title: "Raippaluoto ski track" },
+        ],
+      },
+    ],
+  },
+  {
+    path: "/towers/kvicksund",
+    title: "Kvicksund viewing terrace",
+    description: "A Metsähallitus viewing terrace on the west side of Raippaluoto, near the Vargis walks.",
+    kicker: "Towers",
+    lede: "A viewing terrace kept by Metsähallitus, on the west side near the Vargis and Björkö–Panike walks.",
+    crumbs: [homeCrumb, see, { href: "/towers", label: "Towers" }, { href: "/towers/kvicksund", label: "Kvicksund" }],
+    map: placeMap("Kvicksund viewing terrace", "viewpoints", "kvicksund-nakoalaterassi-2"),
+    blocks: [
+      {
+        kind: "links",
+        items: [
+          { href: "/hiking/vargis", title: "Vargis" },
+          { href: "/hiking/bjorko-panike", title: "Björkö to Panike" },
+        ],
+      },
+    ],
+  },
+  {
+    path: "/towers/sommaro",
+    title: "Sommarö viewing terrace",
+    description: "An accessible viewing terrace kept by Metsähallitus on the Sommarö trails.",
+    kicker: "Towers",
+    lede: "An accessible viewing terrace kept by Metsähallitus, on the Sommarö trails in Södra Vallgrund.",
+    crumbs: [homeCrumb, see, { href: "/towers", label: "Towers" }, { href: "/towers/sommaro", label: "Sommarö" }],
+    map: placeMap("Sommarö viewing terrace", "viewpoints", "sommaro-esteeton-nakoalaterassi-2"),
+    blocks: [
+      {
+        kind: "links",
+        items: [
+          { href: "/hiking/sommaron", title: "Sommarön hiking trail" },
+          { href: "/places/parking", title: "Sommarö parking" },
+        ],
+      },
+    ],
+  },
+  {
+    path: "/huts/bullrikoren",
+    title: "Bullrikören laavu",
+    description: "A free lean-to at the midpoint of the Björkö to Panike trail.",
+    kicker: "Huts",
+    lede: "A free lean-to at the midpoint of the walk from Björkö to Panike.",
+    crumbs: [homeCrumb, see, { href: "/huts", label: "Huts" }, { href: "/huts/bullrikoren", label: "Bullrikören" }],
+    map: placeMap("Bullrikören laavu", "wilderness-huts", "bullrikoren-laavu"),
+    facts: [{ label: "Price", value: "Free" }],
+    blocks: [
+      {
+        kind: "links",
+        items: [{ href: "/hiking/bjorko-panike", title: "Björkö to Panike" }],
+      },
+    ],
+  },
+  {
     path: "/stay",
     title: "Stay",
     description: "RV parking, tent camping, and holiday cabins on Raippaluoto.",
     kicker: "Raippaluoto",
-    lede: "A camper at the harbor, a tent in a sauna yard, or a cabin with bunks. The island is not a hotel strip.",
+    lede: "A camper at the harbor, a tent in a sauna yard, or a holiday cabin. The map on this page is the holiday-cabin layer, so the five rentals show up here.",
     crumbs: [homeCrumb, stay],
     map: categoryMap("Places to stay on Raippaluoto", "holiday-cabins"),
     blocks: [],
@@ -1291,12 +1571,13 @@ export const guides: Guide[] = [
   {
     path: "/stay/holiday-homes",
     title: "Holiday homes",
-    description: "Holiday cabins on Raippaluoto, including Björkören and Sommarön vartiotupa.",
+    description: "Holiday cabins on Raippaluoto: Villa Tallskär, Villa Idören, Kotkanpesä, Kalle’s Inn, and Merenkurkun Majatalo.",
     kicker: "Stay",
-    lede: "Two cabins are already worth knowing. Björkören is a small Metsähallitus rental with a sauna. Sommarön vartiotupa sleeps a much larger group.",
+    lede: "Five holiday cabins are on this map. Four more cabins in the same Huts category sit elsewhere in Mustasaari, so they are not listed here. Björkören and Sommarön vartiotupa are rentals too, on the wilderness-hut layer.",
     crumbs: [homeCrumb, stay, { href: "/stay/holiday-homes", label: "Holiday homes" }],
     map: categoryMap("Holiday cabins on Raippaluoto", "holiday-cabins"),
     blocks: [
+      { kind: "h2", text: "Wilderness rentals" },
       {
         kind: "links",
         items: [
@@ -1305,6 +1586,97 @@ export const guides: Guide[] = [
         ],
       },
     ],
+    cardsHeading: "On the island",
+    cards: [
+      { href: "/stay/holiday-homes/villa-tallskar", title: "Villa Tallskär", text: "Idören 72, Söderudden. Up to 8, from 120 euros." },
+      { href: "/stay/holiday-homes/villa-idoren", title: "Villa Idören", text: "Brändövik. Up to 10, rented by ReplotBo." },
+      { href: "/stay/holiday-homes/kotkanpesa", title: "Björkön Kotkanpesä", text: "Two cabins near Svedjehamn, listed for up to 4." },
+      { href: "/stay/holiday-homes/kalles-inn", title: "Kalle’s Inn", text: "Klobbskatintie 189, at Klobbskat." },
+      { href: "/stay/holiday-homes/merenkurkun-majatalo", title: "Merenkurkun Majatalo", text: "Lodging in Björköby, with a restaurant on their own site." },
+    ],
+  },
+  {
+    path: "/stay/holiday-homes/villa-tallskar",
+    title: "Villa Tallskär",
+    description: "A holiday cabin at Idören 72 in Söderudden, rented by Idoren, from 120 euros.",
+    kicker: "Holiday homes",
+    lede: "Villa Tallskär is at Idören 72 in Söderudden. Idoren rents it. Huts lists it for up to 8 people, from 120 euros.",
+    crumbs: [homeCrumb, stay, { href: "/stay/holiday-homes", label: "Holiday homes" }, { href: "/stay/holiday-homes/villa-tallskar", label: "Villa Tallskär" }],
+    map: placeMap("Villa Tallskär", "holiday-cabins", "villa-tallskar-mustasaari"),
+    facts: [
+      { label: "Address", value: "Idören 72, 65970 Söderudden" },
+      { label: "Sleeps", value: "Up to 8" },
+      { label: "Price", value: "From 120 euros" },
+      { label: "Phone", value: "+358 44 980 7799" },
+    ],
+    blocks: [{ kind: "a", href: "https://idoren72.com/villa-tallskat/", label: "Book Villa Tallskär" }],
+  },
+  {
+    path: "/stay/holiday-homes/villa-idoren",
+    title: "Villa Idören",
+    description: "A holiday villa in Brändövik, rented by ReplotBo, listed for up to 10 people.",
+    kicker: "Holiday homes",
+    lede: "ReplotBo rents Villa Idören in Brändövik. Huts lists it for up to 10 people, year-round, with arrival agreed when you book.",
+    crumbs: [homeCrumb, stay, { href: "/stay/holiday-homes", label: "Holiday homes" }, { href: "/stay/holiday-homes/villa-idoren", label: "Villa Idören" }],
+    map: placeMap("Villa Idören", "holiday-cabins", "replotbo-oy-mustasaari"),
+    facts: [
+      { label: "Place", value: "Brändövik" },
+      { label: "Sleeps", value: "Up to 10" },
+      { label: "Phone", value: "+358 44 980 7799" },
+    ],
+    blocks: [
+      { kind: "a", href: "https://www.replotbo.fi/", label: "ReplotBo" },
+      { kind: "a", href: "https://idoren72.com/villa-idoren/", label: "Villa Idören" },
+    ],
+  },
+  {
+    path: "/stay/holiday-homes/kotkanpesa",
+    title: "Björkön Kotkanpesä",
+    description: "Two holiday cabins near Svedjehamn in Björköby, listed for up to 4 people.",
+    kicker: "Holiday homes",
+    lede: "Björkön Kotkanpesä rents two winterized cabins near Svedjehamn in Björköby. Huts lists the place for up to 4 people.",
+    crumbs: [homeCrumb, stay, { href: "/stay/holiday-homes", label: "Holiday homes" }, { href: "/stay/holiday-homes/kotkanpesa", label: "Kotkanpesä" }],
+    map: placeMap("Björkön Kotkanpesä", "holiday-cabins", "bjorkon-kotkanpesa-mustasaari"),
+    facts: [
+      { label: "Address", value: "Björkövägen 981a, 65870 Björköby" },
+      { label: "Sleeps", value: "Up to 4" },
+      { label: "Phone", value: "+358 50 536 8275" },
+    ],
+    blocks: [{ kind: "a", href: "https://www.bjorkonkotkanpesa.com/en/", label: "Björkön Kotkanpesä" }],
+  },
+  {
+    path: "/stay/holiday-homes/kalles-inn",
+    title: "Kalle’s Inn",
+    description: "A holiday rental at Klobbskatintie 189, Klobbskat.",
+    kicker: "Holiday homes",
+    lede: "Kalle’s Inn is a holiday rental at Klobbskat, on Klobbskatintie.",
+    crumbs: [homeCrumb, stay, { href: "/stay/holiday-homes", label: "Holiday homes" }, { href: "/stay/holiday-homes/kalles-inn", label: "Kalle’s Inn" }],
+    map: placeMap("Kalle’s Inn", "holiday-cabins", "kalle-s-inn-resort-mustasaari"),
+    facts: [
+      { label: "Address", value: "Klobbskatintie 189, 65970 Mustasaari" },
+      { label: "Phone", value: "+358 44 723 2369" },
+    ],
+    blocks: [
+      { kind: "a", href: "https://kallesinnresort.com/", label: "Kalle’s Inn" },
+      {
+        kind: "links",
+        items: [{ href: "/hiking/kikanberget", title: "Klobbskat and Kikanberget" }],
+      },
+    ],
+  },
+  {
+    path: "/stay/holiday-homes/merenkurkun-majatalo",
+    title: "Merenkurkun Majatalo",
+    description: "Lodging in Björköby at Rudträskvägen 6. The inn’s own site also lists a restaurant and an order sauna.",
+    kicker: "Holiday homes",
+    lede: "Merenkurkun Majatalo is in Björköby. Their own site describes lodging, a restaurant, an order sauna, and rooms for parties and meetings.",
+    crumbs: [homeCrumb, stay, { href: "/stay/holiday-homes", label: "Holiday homes" }, { href: "/stay/holiday-homes/merenkurkun-majatalo", label: "Merenkurkun Majatalo" }],
+    map: placeMap("Merenkurkun Majatalo", "holiday-cabins", "merenkurkun-majatalo-oy-mustasaari"),
+    facts: [
+      { label: "Address", value: "Rudträskvägen 6, 65870 Björköby" },
+      { label: "Phone", value: "+358 50 448 6790" },
+    ],
+    blocks: [{ kind: "a", href: "https://www.merenkurkunmajatalo.fi/", label: "Merenkurkun Majatalo" }],
   },
   {
     path: "/eat-and-drink",
@@ -1320,16 +1692,37 @@ export const guides: Guide[] = [
   {
     path: "/eat-and-drink/restaurants",
     title: "Restaurants & cafes",
-    description: "Café Kompass, Kvarken Brewery, and Kalle’s Inn at Klobbskat, and other places to eat on the map.",
+    description: "Café Kompass and Kalle’s Inn at Klobbskat, and other places to eat on the map.",
     kicker: "Eat & drink",
-    lede: "At Klobbskat harbor, Café Kompass is nearby, Kvarken Brewery makes its beer, and Kalle’s Inn is the polished stay. More places to eat are on the map as they are added.",
+    lede: "At Klobbskat harbor, Café Kompass is nearby, and Kalle’s Inn is the stay on Klobbskatintie. Kvarken Brewery is on Replotvägen in Replot. More places to eat are on the map as they are added.",
     crumbs: [homeCrumb, eat, { href: "/eat-and-drink/restaurants", label: "Restaurants & cafes" }],
     map: categoryMap("Restaurants and cafes on Raippaluoto", "restaurants"),
     blocks: [
       {
         kind: "links",
-        items: [{ href: "/hiking/kikanberget", title: "Klobbskat and Kikanberget" }],
+        items: [
+          { href: "/hiking/kikanberget", title: "Klobbskat and Kikanberget" },
+          { href: "/eat-and-drink/kvarken-brewery", title: "Kvarken Brewery" },
+          { href: "/stay/holiday-homes/kalles-inn", title: "Kalle’s Inn" },
+        ],
       },
+    ],
+  },
+  {
+    path: "/eat-and-drink/kvarken-brewery",
+    title: "Kvarken Brewery",
+    description: "A brewery, gastropub, and pizzeria on Replotvägen in Replot.",
+    kicker: "Eat & drink",
+    lede: "Kvarken Brewery brews in Replot and runs a gastropub and pizzeria on Replotvägen. House beers, pizza, and pub food. Hours change by the day.",
+    crumbs: [homeCrumb, eat, { href: "/eat-and-drink/kvarken-brewery", label: "Kvarken Brewery" }],
+    map: placeMap("Kvarken Brewery", "breweries", "kvarken-brewery-mustasaari"),
+    facts: [
+      { label: "Address", value: "Replotvägen 427, 65800 Replot" },
+      { label: "Phone", value: "+358 6 352 0033" },
+    ],
+    blocks: [
+      { kind: "a", href: "https://www.kvarkenbrewery.com/gastro-pub", label: "The gastropub" },
+      { kind: "a", href: "https://kvarkenbrewery.fi", label: "Kvarken Brewery" },
     ],
   },
   {
