@@ -1,6 +1,34 @@
 import type { Photo } from "@/app/content/shared";
 
 export const galleries: Record<string, Photo[]> = {
+  "/fishing/boats": [
+    {
+      src: "/sjoberg-boats-1904.jpg",
+      alt: "The heading of Wilhelm Sjöberg’s notes on the fishing boats of Replot",
+      credit: "Manuscript: Wilhelm Sjöberg, Svenska litteratursällskapet i Finland, CC BY 4.0, 1904",
+    },
+  ],
+  "/places/norra-vallgrund/sealing": [
+    {
+      src: "/replot-seal-hunt-1966.jpg",
+      alt: "People from Replot on the ice with a covered seal boat, 20 March 1966",
+      credit: "Photo: Rafael Olin, Svenska litteratursällskapet i Finland, CC BY 4.0, 1966",
+    },
+  ],
+  "/the-island/the-municipality": [
+    {
+      src: "/replot-church-2014.jpg",
+      alt: "Replot Church and its separate bell tower",
+      credit: "Photo: Kospo75, Wikimedia Commons, CC BY-SA 3.0, 2014. Cropped.",
+    },
+  ],
+  "/the-island/the-crossing": [
+    {
+      src: "/replot-ferry-1963.jpg",
+      alt: "The car ferry Replot 2 frozen in the sound, photographed on 17 February 1963",
+      credit: "Photo: Rafael Olin, Svenska litteratursällskapet i Finland, CC BY 4.0, 1963",
+    },
+  ],
   "/beaches/fjardskar": [
     {
       src: "https://aqyqvkpbznygsbmrzfde.supabase.co/storage/v1/object/public/feature-images/places/1742237/img20231018143506.jpg",

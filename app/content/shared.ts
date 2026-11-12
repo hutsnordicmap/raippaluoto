@@ -25,7 +25,8 @@ export type Block =
   | { kind: "p"; text: string }
   | { kind: "h2"; text: string }
   | { kind: "links"; items: GuideLink[] }
-  | { kind: "a"; href: string; label: string };
+  | { kind: "a"; href: string; label: string }
+  | { kind: "youtube"; id: string; title: string };
 
 export type MapFrame = {
   src: string;

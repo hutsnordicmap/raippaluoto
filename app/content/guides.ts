@@ -178,7 +178,7 @@ export const guides: Guide[] = [
       },
       {
         kind: "p",
-        text: "Today’s Mustasaari was formed in 1973, when five municipalities merged: Björköby, Korsholm, Kvevlax, Replot, and Solf. In Finnish those are Björköby, Mustasaari, Koivulahti, Raippaluoto, and Sulva. Replot had been its own municipality until that date. The municipality now reports about 19,800 inhabitants, of whom 69 percent have Swedish and 29 percent Finnish as their mother tongue. That split is for the whole municipality, not a separate census of the island.",
+        text: "Today’s Mustasaari was formed in 1973, when five municipalities merged: Björköby, Korsholm, Kvevlax, Replot, and Solf. In Finnish those are Björköby, Mustasaari, Koivulahti, Raippaluoto, and Sulva. The National Library of Finland dates Replot’s joining to 1 January 1973, and notes that Solf was joined that year to Vaasa as well as to Mustasaari. The municipality now reports about 19,800 inhabitants, of whom 69 percent have Swedish and 29 percent Finnish as their mother tongue. That split is for the whole municipality, not a separate census of the island.",
       },
       { kind: "h2", text: "How many people live here" },
       {
@@ -192,7 +192,7 @@ export const guides: Guide[] = [
       },
       {
         kind: "p",
-        text: "On 18 April 2026 Helsinki opened the Kruunuvuori Bridge, 1,191 metres, and Yle reported that it took the title. That bridge is for walking, cycling, and trams. Cars are not allowed on it. The drive onto Raippaluoto is still the Replot Bridge. Mustasaari’s own page has not yet caught up: it still calls this Finland’s longest bridge.",
+        text: "On 18 April 2026 Helsinki opened the Kruunuvuori Bridge, 1,191 metres, and Yle reported that it took the title. That opening was for walking and cycling. Cars are not allowed on it. The drive onto Raippaluoto is still the Replot Bridge. Mustasaari’s own page has not yet caught up: it still calls this Finland’s longest bridge.",
       },
       { kind: "h2", text: "The land is still rising" },
       {
@@ -210,7 +210,7 @@ export const guides: Guide[] = [
       { kind: "h2", text: "The villages on the record" },
       {
         kind: "p",
-        text: "The National Library of Finland’s place vocabulary lists the villages on Replot as Replot, Södra Vallgrund (with the hamlet Kalvholmen), Norra Vallgrund, Brändövik, Söderudden, Panike, and Vistan. Björkö, with the village Björköby, lies to the north. Those are recorded place names, not a ranking of which village matters. The guides on this site cover the ones a visitor actually asks for.",
+        text: "The National Library of Finland records Replot as a place in Mustasaari, and it records Södra Vallgrund, the island of Björkö, and Björköby there too. The guides on this site cover the church village, Norra Vallgrund, Södra Vallgrund, and Björköby.",
       },
       { kind: "h2", text: "Where to park" },
       {
@@ -271,9 +271,14 @@ export const guides: Guide[] = [
             text: "841 residents. This is the Replot postcode, not the whole island.",
           },
           {
-            href: "https://finto.fi/yso-paikat/se/page/p105764",
-            title: "National Library of Finland: Replot",
-            text: "The Swedish entry lists the village names, and the merger into Korsholm in 1973.",
+            href: "https://finto.fi/ysa/fi/page/Y105764",
+            title: "National Library of Finland: Raippaluoto",
+            text: "A former municipality in the province of Vaasa, joined to Mustasaari on 1 January 1973.",
+          },
+          {
+            href: "https://finto.fi/yso-paikat/fi/page/p94297",
+            title: "National Library of Finland: Mustasaari",
+            text: "Södra Vallgrund, Björkö, and Björköby. Solf was joined in 1973 to Vaasa and to Mustasaari.",
           },
         ],
       },
@@ -281,8 +286,263 @@ export const guides: Guide[] = [
         kind: "links",
         items: [
           { href: "/places/replot-bridge", title: "Replot Bridge", text: "The crossing, and the beach just before it." },
+          { href: "/the-island/the-crossing", title: "The crossing", text: "The ice, the launches, the ferry, and the day the bridge opened." },
+          { href: "/places/norra-vallgrund/sealing", title: "Sealing at Norra Vallgrund", text: "The 1956 film, and what in it was arranged for the camera." },
+          { href: "/fishing/boats", title: "Boats and herring", text: "Sjöberg’s 1904 notes on the fishing boats, and the museum in Malax." },
+          { href: "/the-island/the-municipality", title: "The old municipality", text: "Replot until it joined Mustasaari on 1 January 1973." },
           { href: "/places/kvarken", title: "Kvarken Archipelago", text: "The north end, and the walks from Björköby." },
           { href: "/places", title: "Places to go", text: "The villages." },
+        ],
+      },
+    ],
+  },
+  {
+    path: "/the-island/the-crossing",
+    title: "The crossing",
+    description:
+      "How people crossed to Raippaluoto before the bridge: winter ice, the launches to Vaasa, the car ferry from 1952, and the opening on 27 August 1997.",
+    kicker: "The island",
+    lede: "For most of the island’s history the sound was crossed by boat, and in winter on the ice. A car ferry from Alskat began in 1952. The bridge replaced it on 27 August 1997.",
+    crumbs: [
+      homeCrumb,
+      { href: "/the-island", label: "The island" },
+      { href: "/the-island/the-crossing", label: "The crossing" },
+    ],
+    map: {
+      title: "Map of the crossing",
+      href: cityMap,
+      src: "https://www.huts.fi/embed/finland/ostrobothnia/mustasaari/bridges?trails=1&address=1&lat=63.208000&lng=21.470000&zoom=12.80",
+    },
+    facts: [
+      { label: "Car ferry from Alskat", value: "1952" },
+      { label: "Bridge opened", value: "27 August 1997" },
+      { label: "Ferry traffic", value: "About 1,500 cars a day" },
+      { label: "Bridge length", value: "1,045 m" },
+    ],
+    blocks: [
+      { kind: "h2", text: "Before there was a road ferry" },
+      {
+        kind: "p",
+        text: "A 2020 inventory of the built landscape, written for the municipality, says the old connection to the mainland was by boat, and by horse in winter. Motorboats, from the early 1900s, made it easier to move people and goods.",
+      },
+      {
+        kind: "p",
+        text: "The heritage signs kept by Replot Byaråd describe shared motor launches between Replot harbour and Vaasa from 1907 to 1942, carrying people, goods, and post. The sign says they sailed about twice a week when the weather allowed, on Monday morning and Saturday afternoon, and that the home harbour was at Replot hamn. The sign names the individual boats. Those names are not repeated here. They have not been checked one by one against a ship register.",
+      },
+      { kind: "h2", text: "The car ferry" },
+      {
+        kind: "p",
+        text: "In 1952 a car ferry began running from Alskat, on the mainland, to Raippaluoto. The same municipal inventory says that crossing ended the old isolation and made it possible to work on the mainland. The heritage sign dates the start to December 1952 and calls the island landing Domarskat. No newspaper issue has been opened for this page that would pin the day, so the day stays off it.",
+      },
+      {
+        kind: "p",
+        text: "Ship lists record the first ferry as Replot, completed in 1952 at Valmet’s yard in Helsinki for Tie- ja vesirakennushallitus, the National Board of Public Roads and Waterways. Äänimeri gives her as 26.40 metres long, 7.82 metres wide, and 2.20 metres in draught, 141 gross tons, with a 232-horsepower engine, and a home port of Vaasa. She is listed on the Alskat–Raippaluoto run until 1962, when she was renamed Bergö and moved to the route from Vaasa to Bergö. The heritage sign calls her 27 metres long, which is that 26.40 metres in round figures, and gives her a load of 50 tons. The 50 tons is a load figure, not the ship list’s 141 gross tons. This page does not treat them as the same number.",
+      },
+      { kind: "h2", text: "Frozen in the sound" },
+      {
+        kind: "p",
+        text: "A larger ferry, Replot 2, took the route in 1962. Ship lists say she was built that year at Wärtsilä in Vaasa for the same road board, about 36.5 metres long, and that she stayed on Replot–Alskat until 1969. On 17 February 1963 Rafael Olin photographed her frozen in the sound. The name Replot 2 is painted on the bow. The archive caption says she had frozen in at the turn of 1962–63, with two broken propellers.",
+      },
+      { kind: "h2", text: "A shorter run, then the bridge" },
+      {
+        kind: "p",
+        text: "In November 1969 the road administration took delivery of Merilintu, also called Havsfågeln, built by Hollming in Rauma. Ship lists put her on the run between Fjärdskär and Replot, and then, in May 1975, on the crossing between Hailuoto and Oulunsalo. The heritage sign says wire-guided ferries began the same year, after a causeway from Alskat out to Fjärdskär had shortened the open water. The sign’s distances, 2.8 kilometres down to 750 metres, are not repeated here. The 1969 list already names Fjärdskär as the mainland end, so the causeway’s year is left with the sign.",
+      },
+      {
+        kind: "p",
+        text: "The Vaasa road district’s project page describes the ferry at the end of its life. About 1,500 cars a day on average, about 1,800 in summer, and the district called it the busiest ferry in Finland. Local residents were 65 percent of the traffic. At busy times two ferries ran at once, and summer weekends still left long queues at the landings. The same page says the ferries would soon have had to be replaced, at a purchase price of about 5 million euros, and puts the bridge at about 25 million euros.",
+      },
+      {
+        kind: "p",
+        text: "Vaasan tiepiiri was the client. Insinööritoimisto Suunnittelu-Kortes AEK designed the bridge. Polar-Rakennus built it. Work on the whole project, including the embankments and the finishing, ran from 1 September 1994 to 31 July 1998. The bridge opened to traffic on 27 August 1997. Yle, on the 25th anniversary, reported that people danced on the deck the day before, and that President Martti Ahtisaari opened the bridge to traffic on the 27th.",
+      },
+      {
+        kind: "p",
+        text: "Kenth Nedergård of the Kvarken World Heritage Association told Yle that fewer than 600,000 vehicles a year used the ferry, and that the figure rose to 800,000 in the first year of the bridge. In 2018 the bridge was crossed more than a million times. The road district’s 1,500 cars a day is the same order of magnitude as Nedergård’s yearly figure for the ferry. A heritage sign’s “about 2,000 vehicles a day” in the last year is not used here.",
+      },
+      {
+        kind: "p",
+        text: "The measurements are Mustasaari’s, and they are on the bridge page: 1,045 metres, a main span of 250 metres, 26 metres of clearance, pylons 82.5 metres high, and 64 cables. One inventory written for the municipality says the bridge was built in 1995, and still calls it Finland’s longest. The road administration’s dates are the ones used here. What changed in April 2026, when a longer bridge opened in Helsinki for walking and cycling, is on the island page.",
+      },
+      { kind: "h2", text: "Across the ice" },
+      {
+        kind: "p",
+        text: "The inventory’s winter traffic, before the ferry, was by horse. The heritage sign adds a marked ice road from Häggnäsfladan, near where the bridge now stands, toward Grönvik and toward Vaasa, marked by people who lived there. It says the road administration kept a state ice road from the Replot shore to Alskat from 1948 to 1975, and that people still used the ice in winters when the ferry could not move. The sign also describes a special 22-seat bus, called a vatubuss, built so that it would sink slowly if the ice failed, with hatches in the roof. That bus is the sign’s account. It is not in the inventory.",
+      },
+      {
+        kind: "p",
+        text: "The same sign ties this ice road to a winter road that once ran toward Umeå, and to war supplies moved in 1938–1944. Those claims are not in the other sources used here, so they are not treated as part of the ferry’s ice road.",
+      },
+      { kind: "h2", text: "Sources" },
+      {
+        kind: "links",
+        items: [
+          {
+            href: "https://korsholm.fi/wp-content/uploads/2021/05/Rakennetun-kulttuuriympariston-inventointi-Raippaluoto-2020.pdf",
+            title: "Mustasaari, 2020: inventory of the built landscape",
+            text: "Boats and winter horses, the ferry from Alskat in 1952, and the bridge completed in 1997. The same report also says the bridge was built in 1995. That date is not used.",
+          },
+          {
+            href: "https://www.aanimeri.fi/piwigo/index.php?/category/2201",
+            title: "Äänimeri: M/S Replot",
+            text: "Built in 1952 at Valmet in Helsinki. Dimensions, owner, and the move to the Bergö route in 1962.",
+          },
+          {
+            href: "https://www.faktaomfartyg.se/replot_II_1962.htm",
+            title: "Fakta om Fartyg: Replot II",
+            text: "Built in 1962 at Wärtsilä in Vaasa. On Replot–Alskat until 1969.",
+          },
+          {
+            href: "https://faktaomfartyg.se/merilintu_1969.htm",
+            title: "Fakta om Fartyg: Merilintu",
+            text: "Delivered in November 1969. Fjärdskär–Replot, then Hailuoto–Oulunsalo in May 1975.",
+          },
+          {
+            href: "https://finna.fi/Record/sls.%25C3%2596TA+112_ota112-2_foto_00240",
+            title: "Svenska litteratursällskapet i Finland: Replot 2 in the ice",
+            text: "Rafael Olin, 17 February 1963. CC BY 4.0. The caption is the source for the broken propellers.",
+          },
+          {
+            href: "https://creativecommons.org/licenses/by/4.0/",
+            title: "CC BY 4.0",
+            text: "The licence on Olin’s photograph.",
+          },
+          {
+            href: "https://www.tieh.fi/rluoto.htm",
+            title: "Tiehallinto, Vaasa road district: the bridge project",
+            text: "1,500 and 1,800 cars a day, the cost, the builders, and the opening on 27 August 1997.",
+          },
+          {
+            href: "https://yle.fi/a/3-12579610",
+            title: "Yle, 27 August 2022",
+            text: "The dance on the deck, President Ahtisaari, and Nedergård’s traffic figures.",
+          },
+          {
+            href: "https://replotbyarad.sou.fi/sv/vad/karta_over_kulturhistoriska_skyltar/samfardsel/",
+            title: "Replot Byaråd: the crossing sign",
+            text: "The launches, Domarskat, the causeway, the ice road, and the vatubuss. Used where a second source does not cover the same point, and said so in the text.",
+          },
+          {
+            href: "https://mustasaari.fi/kunta/matkailu/nahtavyydet/raippaluodon-silta",
+            title: "Mustasaari: the bridge",
+            text: "The measurements on the bridge page.",
+          },
+        ],
+      },
+      {
+        kind: "links",
+        items: [
+          { href: "/places/replot-bridge", title: "Replot Bridge", text: "The measurements, and the beach just before the crossing." },
+          { href: "/the-island", title: "The island", text: "Names, land uplift, and what changed in 2026." },
+        ],
+      },
+    ],
+  },
+  {
+    path: "/the-island/the-municipality",
+    title: "The old municipality",
+    description:
+      "Replot was its own municipality until 1 January 1973, when it joined Mustasaari. The church and the parish stayed.",
+    kicker: "The island",
+    lede: "Replot was its own municipality until 1 January 1973. On that day it joined Mustasaari. The church was already there, and the parish that uses it is still there.",
+    crumbs: [
+      homeCrumb,
+      { href: "/the-island", label: "The island" },
+      { href: "/the-island/the-municipality", label: "The old municipality" },
+    ],
+    map: areaMap("Map of Raippaluoto", "63.260000", "21.290000", "9.50"),
+    facts: [
+      { label: "Joined Mustasaari", value: "1 January 1973" },
+      { label: "Parish independent", value: "1872" },
+      { label: "Church", value: "Built 1778–1781" },
+      { label: "Parish office", value: "Replot" },
+    ],
+    blocks: [
+      { kind: "h2", text: "Until 1973" },
+      {
+        kind: "p",
+        text: "Replot, Raippaluoto in Finnish, was a municipality of its own in the province of Vaasa. The National Library of Finland says that municipality was joined to Mustasaari on 1 January 1973. Mustasaari says the municipality known today was formed in 1973 from five neighbours: Björköby, Korsholm, Kvevlax, Replot, and Solf. In Finnish those are Björköby, Mustasaari, Koivulahti, Raippaluoto, and Sulva. In 2023 Mustasaari marked 50 years since that formation, and 675 years since the parish was first named in a royal letter, on 13 February 1348.",
+      },
+      {
+        kind: "p",
+        text: "The library’s note on Mustasaari is more specific about Solf. It dates the joining of Replot, Kvevlax, and Björköby to 1 January 1973, and says Solf was joined in 1973 to Vaasa and to Mustasaari. This page follows that note. It gives no headcount for the old municipality of Replot, and no headcount for the island as a whole. The postal-area figure on the island page is a different area.",
+      },
+      { kind: "h2", text: "What stayed" },
+      {
+        kind: "p",
+        text: "What ended on that day was Replot as a municipality. Björköby ended as a municipality on the same day. The heritage inventory says Replot became a preaching-house congregation under Mustasaari in 1775, a chapel parish in 1840, and an independent parish in 1872, and that the municipality was joined to Mustasaari in 1973. Replots församling still keeps an office at Prästgårdsvägen 9 in Replot, and its own pages still list services in Replot church. The Finnish parish in Mustasaari uses the same church, mainly around Christmas and Easter, and for ceremonies.",
+      },
+      { kind: "h2", text: "The church" },
+      {
+        kind: "p",
+        text: "The church is in the church village. The heritage inventory describes a small long church with a three-sided choir, built from 1778 to 1781, and a separate Ostrobothnian Renaissance bell tower from the same years. The Finnish parish calls it Gustav Adolf’s church, dates it to 1781, and gives the address as Kirkkotie 58. The inventory says an earlier prayer house was probably built in the 1740s.",
+      },
+      {
+        kind: "p",
+        text: "The inventory describes an altarpiece close to Dutch baroque, with paintings of the Last Supper and the baptism of Jesus from 1673, and a pulpit of the same age. The mother church gave them to the chapel in the 1840s. The Finnish parish says they came from St Mary’s church in Old Vaasa, and that the move kept them out of the fire that destroyed that church in 1852.",
+      },
+      {
+        kind: "p",
+        text: "The inventory names the parsonage Rosenlund, built in 1824. Near the church it names a loan magazine, and a local museum founded in 1932 and furnished in a nineteenth-century cottage. A road runs east from the church to the fishing harbour, where old shore sheds remain. The church village and that harbour are one nationally significant built cultural environment. The church village also lies inside the Kvarken Archipelago, added to the World Heritage List in 2006.",
+      },
+      { kind: "h2", text: "The places on the record" },
+      {
+        kind: "p",
+        text: "The National Library records Replot as a place in Mustasaari, and it records Södra Vallgrund, the island of Björkö, and Björköby there too. The entry for the former municipality of Björköby says it was joined to Mustasaari on 1 January 1973. The guides on this site cover the church village, Norra Vallgrund, Södra Vallgrund, and Björköby.",
+      },
+      {
+        kind: "links",
+        items: [
+          { href: "/places/norra-vallgrund", title: "Norra Vallgrund", text: "The fishing village and the guest harbour." },
+          { href: "/places/sodra-vallgrund", title: "Södra Vallgrund" },
+          { href: "/places/bjorkoby", title: "Björköby", text: "The way north to Kvarken." },
+          { href: "/the-island", title: "The island", text: "The names, the bridge, and the postal-area population." },
+        ],
+      },
+      { kind: "h2", text: "Sources" },
+      {
+        kind: "links",
+        items: [
+          {
+            href: "https://finto.fi/ysa/fi/page/Y105764",
+            title: "National Library of Finland: Raippaluoto",
+            text: "An island in the Kvarken and a former municipality in the province of Vaasa, joined to Mustasaari on 1 January 1973.",
+          },
+          {
+            href: "https://finto.fi/yso-paikat/fi/page/p94297",
+            title: "National Library of Finland: Mustasaari",
+            text: "Replot, Kvevlax, and Björköby joined on 1 January 1973. Solf was joined that year to Vaasa and to Mustasaari.",
+          },
+          {
+            href: "https://en.korsholm.fi/municipality/facts-about-the-municipality",
+            title: "Mustasaari: facts about the municipality",
+            text: "The five municipalities in the municipality’s own account of 1973.",
+          },
+          {
+            href: "https://mustasaari.fi/kunta/tietoa-kunnasta/historia/mustasaari-675-vuotta",
+            title: "Mustasaari: 675 years",
+            text: "The first written mention on 13 February 1348, and 50 years since the 1973 formation.",
+          },
+          {
+            href: "https://www.rky.fi/read/asp/r_kohde_det.aspx?KOHDE_ID=1678",
+            title: "Finnish Heritage Agency: Replot church village and fishing harbour",
+            text: "The church, the bell tower, the altarpiece, the parsonage, the museum, and the parish dates.",
+          },
+          {
+            href: "https://www.mustasaarensuomalainenseurakunta.fi/kirkko-ja-tilat/raippaluodon-kirkko",
+            title: "Mustasaari Finnish parish: Raippaluodon kirkko",
+            text: "Gustav Adolf’s church, Kirkkotie 58, and the move from St Mary’s in Old Vaasa.",
+          },
+          {
+            href: "https://www.replotsforsamling.fi/",
+            title: "Replots församling",
+            text: "The parish office in Replot, and services in Replot church.",
+          },
+          {
+            href: "https://commons.wikimedia.org/wiki/File:Raippaluodon_kirkko_(3).jpg",
+            title: "Kospo75: Replot Church, 2014",
+            text: "CC BY-SA 3.0. The photograph on this page.",
+          },
         ],
       },
     ],
@@ -341,9 +601,109 @@ export const guides: Guide[] = [
       },
       { kind: "h2", text: "History" },
       {
+        kind: "links",
+        items: [
+          {
+            href: "/places/norra-vallgrund/sealing",
+            title: "Sealing at Norra Vallgrund",
+            text: "A 1956 film of a winter hunt. The scenes were arranged for the camera.",
+          },
+        ],
+      },
+      {
         kind: "a",
         href: "https://storymaps.arcgis.com/stories/122142073eb8416b9cb9e2738234d318",
         label: "History of Norra Vallgrund",
+      },
+    ],
+  },
+  {
+    path: "/places/norra-vallgrund/sealing",
+    title: "Sealing at Norra Vallgrund",
+    description:
+      "The 1956 film Sälfångst i Norra Vallgrund: who made it, the four hunters, and the note that the scenes were arranged for the camera.",
+    kicker: "Norra Vallgrund",
+    lede: "In 1956 Ragna Ahlbäck filmed a winter seal hunt at Norra Vallgrund. The film follows a real kind of trip, and the scenes were arranged for the camera.",
+    crumbs: [
+      homeCrumb,
+      places,
+      { href: "/places/norra-vallgrund", label: "Norra Vallgrund" },
+      { href: "/places/norra-vallgrund/sealing", label: "Sealing" },
+    ],
+    map: areaMap("Map of Norra Vallgrund", "63.190000", "21.318000", "12.60"),
+    facts: [
+      { label: "Film", value: "Sälfångst i Norra Vallgrund" },
+      { label: "Year", value: "1956" },
+      { label: "Length", value: "30 minutes" },
+      { label: "Archive", value: "SLS 686" },
+    ],
+    blocks: [
+      {
+        kind: "youtube",
+        id: "KXmJgQOkAy0",
+        title: "Sälfångst i Norra Vallgrund (1956)",
+      },
+      { kind: "h2", text: "The film" },
+      {
+        kind: "p",
+        text: "Svenska litteratursällskapet i Finland keeps the film as SLS 686. Its title is Sälfångst i Norra Vallgrund. The catalogue places it at Norra Vallgrund, in the Replot archipelago near Vaasa, and dates it to 1956. Ragna Ahlbäck is credited as its maker. Heikki Nieminen is credited as the cinematographer. The hunters are Gunnar Bengs, Emil Björklund, Anders Dahl, and Leander Ståhl.",
+      },
+      {
+        kind: "p",
+        text: "The catalogue says the events follow those of a traditional winter sealing trip, and that the scenes were arranged for filming. It is a record of how that hunt was done, set up so that it could be filmed. It is not an unplanned camera left running on one trip.",
+      },
+      { kind: "h2", text: "What it shows" },
+      {
+        kind: "p",
+        text: "An SLS article on the film calls it 30 minutes long. In that account the men drag the seal boats, the fälbåtar, and the gear across the ice. They search with binoculars. They change into white clothes. A hunter creeps forward on a skridstång, the pole used for that crawl, shoots, and comes back to the boat with the catch. The article does not say what the catch is. At the end they eat the food they carried, in the lee of the boat, which is their camp for a few days on the ice. Those are the scenes the article describes. The catalogue’s warning still applies: they were arranged for the camera.",
+      },
+      { kind: "h2", text: "Sound, added later" },
+      {
+        kind: "p",
+        text: "The original film has no sound. In the 1990s Kvarkens båtmuseum in Malax produced a version with sound. The catalogue names Thomas Sjöblom as the narrator and Antti Ukkonen as the composer. A later SLS article says one of the hunters who took part tells what the pictures show. The article does not name him, and the catalogue names Sjöblom, who is not one of the four hunters. This page does not choose between those two accounts.",
+      },
+      { kind: "h2", text: "A photograph from ten years later" },
+      {
+        kind: "p",
+        text: "The picture on this page is not a frame from the film. Rafael Olin took it on 20 March 1966. The archive description says it is people from Replot on a seal hunt, taking a fälbåt across the ice. Descriptions in this collection mix the photographer’s own notes with later identifications, so that line is the archive’s, not a caption we can assign to Olin. The record places the photograph at Replot. It does not say Norra Vallgrund, and it does not name the men. Three men and a covered boat on broken ice are what the frame shows.",
+      },
+      { kind: "h2", text: "Where to watch it" },
+      {
+        kind: "p",
+        text: "The player on this page is the copy Svenska litteratursällskapet i Finland posted on YouTube. SLS also publishes two files of the film, both under CC BY 4.0. Both are QuickTime files. One is about 4.2 gigabytes and the other about 2.4. The record labels them only as the first and the second file. It does not say which one is the silent original and which one is the sound version from the 1990s. Those files are on the archive record linked below.",
+      },
+      { kind: "h2", text: "Sources" },
+      {
+        kind: "links",
+        items: [
+          {
+            href: "https://sls.finna.fi/Record/sls.SLS+686",
+            title: "SLS 686: Sälfångst i Norra Vallgrund",
+            text: "The 1956 film, the four hunters, the arranged scenes, the later sound, and the two CC BY 4.0 files.",
+          },
+          {
+            href: "https://www.sls.fi/sv/blogg/tradition-i-aktion-etnografiska-filmer-pa-finna/",
+            title: "SLS, 24 October 2025: ethnographic films on Finna",
+            text: "The 30 minutes, what the scenes contain, and the line that one of the hunters narrates.",
+          },
+          {
+            href: "https://finna.fi/Record/sls.%25C3%2596TA+112_ota112-15_foto_01407",
+            title: "Rafael Olin, 20 March 1966",
+            text: "People from Replot taking a fälbåt across the ice. CC BY 4.0. Not a frame from the film.",
+          },
+          {
+            href: "https://creativecommons.org/licenses/by/4.0/",
+            title: "CC BY 4.0",
+            text: "The licence on the film files and on Olin’s photograph.",
+          },
+        ],
+      },
+      {
+        kind: "links",
+        items: [
+          { href: "/places/norra-vallgrund", title: "Norra Vallgrund", text: "The village, the harbor, and the beach." },
+          { href: "/the-island/the-crossing", title: "The crossing", text: "How people got to the island before the bridge." },
+        ],
       },
     ],
   },
@@ -421,12 +781,13 @@ export const guides: Guide[] = [
     blocks: [
       {
         kind: "p",
-        text: "Mustasaari’s figures: a cable-stayed bridge, two pylons, 64 cables of which the longest is 127 metres. It was Finland’s longest bridge until 18 April 2026, when Helsinki opened the Kruunuvuori Bridge for walking, cycling, and trams. Cars still cross to the island here.",
+        text: "Mustasaari’s figures: a cable-stayed bridge, two pylons, 64 cables of which the longest is 127 metres. It was Finland’s longest bridge until 18 April 2026, when Helsinki opened the Kruunuvuori Bridge for walking and cycling. Cars still cross to the island here.",
       },
       {
         kind: "links",
         items: [
           { href: "/the-island", title: "The island", text: "The sourced account of the bridge, the land uplift, and the municipality." },
+          { href: "/the-island/the-crossing", title: "The crossing", text: "How people got across before the bridge, and the day it opened." },
           { href: "/fishing", title: "Fishing at the bridge", text: "A shore spot on the crossing, plus the piers elsewhere on the island." },
         ],
       },
@@ -1369,6 +1730,17 @@ export const guides: Guide[] = [
         items: [{ href: "/places/replot-bridge", title: "Replot Bridge" }],
       },
       { kind: "a", href: "https://www.eraluvat.fi/kalastus/kalastonhoitomaksu", label: "Fisheries management fee" },
+      { kind: "h2", text: "The old boats" },
+      {
+        kind: "links",
+        items: [
+          {
+            href: "/fishing/boats",
+            title: "Boats and herring",
+            text: "What Wilhelm Sjöberg wrote down in 1904 and 1905, and the boat museum in Malax.",
+          },
+        ],
+      },
       { kind: "h2", text: "Piers" },
       {
         kind: "p",
@@ -1381,6 +1753,109 @@ export const guides: Guide[] = [
           { href: "/hiking/vargis", title: "Vargis" },
           { href: "/saunas/bjorkoren", title: "Björkören" },
           { href: "/hiking/sommaron", title: "Sommarö trails" },
+        ],
+      },
+    ],
+  },
+  {
+    path: "/fishing/boats",
+    title: "Boats and herring",
+    description:
+      "Wilhelm Sjöberg’s 1904 notes on the fishing boats of Replot, the herring boat among them, and the boat museum in Malax.",
+    kicker: "Fishing",
+    lede: "In 1904 and 1905 Wilhelm Sjöberg wrote down the fishing boats of the Replot archipelago, and which of them went out for herring. The harbours on the map are the ones a visitor uses now. The boat museum is in Malax.",
+    crumbs: [
+      homeCrumb,
+      see,
+      { href: "/fishing", label: "Fishing & piers" },
+      { href: "/fishing/boats", label: "Boats and herring" },
+    ],
+    map: categoryMap("Piers on Raippaluoto", "boat-launches"),
+    facts: [
+      { label: "Notes", value: "1904–1905" },
+      { label: "Writer", value: "Wilhelm Sjöberg" },
+      { label: "Archive", value: "SLS 94" },
+      { label: "Boat museum", value: "Malax, not on the island" },
+    ],
+    blocks: [
+      { kind: "h2", text: "What he wrote down" },
+      {
+        kind: "p",
+        text: "Svenska litteratursällskapet i Finland keeps the notebook as SLS 94, Traditionsuppteckningar från Replot. The archive dates the collection to 1904 and names the collector as Wilhelm Sjöberg. The boat section is headed, in his words, as the fishing boats originally used in the Replot archipelago. The foot of that page is signed Replot, September 1904, Wilhelm Sjöberg. The notes go on to the next page and end on 14 July 1905, signed Wille Sjöberg. Åbo Akademi, writing about the same family of collectors, spells him Vilhelm and says he kept a country shop, and that his wife Elisabet Gädda was from Vallgrund. The archive spelling is the one used here.",
+      },
+      {
+        kind: "p",
+        text: "SLS says the notebook is on Finland’s UNESCO Memory of the World list, one of 544 of the archive’s oldest collections added to that national list in 2021. The file is published under CC BY 4.0. The songs in the same notebook are not reprinted here.",
+      },
+      { kind: "h2", text: "The boats" },
+      {
+        kind: "p",
+        text: "He says the fishing boats then in common use were of two kinds, both called skötbåtar, and also called sjöbåtar and storbåtar. One he gives as 30 feet long between the stems, and 10 feet wide. The other of that pair he gives as 27 feet long. A further boat, the enabåt, he gives as 28 feet long and 6½ feet wide. The feet are his. This page does not convert them.",
+      },
+      {
+        kind: "p",
+        text: "Those boats, he writes, carried a mast and a sail amidships, and could sail close to the wind in a moderate breeze. He puts five men in the enabåt, which he also calls a notbåt. The crew he gives for the skötbåtar is in the same sentence, and the digit is easy to misread, so it is left in the notebook. A smaller boat followed in tow, between 9 and 12 feet long, which he calls a jullbåt. He counts the planks: five in the first fishing boats, four in the two later ones, and three in the jullar.",
+      },
+      {
+        kind: "p",
+        text: "Around 1809, he writes, a smaller kind of skötbåt came into use. The largest of the boats he then describes is 24 feet long, 6 feet wide, and 1½ feet high, with two spritsails, and a crew of only two. He says those fiskeskötbåtar were used for sea fishing, which he calls herring fishing, under the names sillfiske and strömmingsfiske. The enabåt, he writes, was for fishing closer to home, mostly the hauling of a net. He then names the parts of the hull and says many of those names were still in use. The part-names stay in the notebook.",
+      },
+      {
+        kind: "p",
+        text: "The typed index gives the boat section as manuscript pages 79 to 90. A handwritten note on that index puts place names, and where the names come from, at pages 82 to 90. The place-name list is not copied here.",
+      },
+      { kind: "h2", text: "The harbours now" },
+      {
+        kind: "p",
+        text: "Sjöberg was describing types of boat, not the guest harbours on the map. Norra Vallgrund still has its fishing harbour, with two private harbours and one public guest harbour kept by Mustasaari. Klobbskat is the harbour at the outer end. The pins on this map are the piers and landings, the same ones as on the fishing page.",
+      },
+      {
+        kind: "links",
+        items: [
+          { href: "/fishing", title: "Fishing and the piers" },
+          { href: "/places/norra-vallgrund", title: "Norra Vallgrund", text: "The fishing harbour and the guest harbour." },
+          { href: "/hiking/kikanberget", title: "Klobbskat", text: "The harbour beside the short path." },
+        ],
+      },
+      { kind: "h2", text: "The boat museum" },
+      {
+        kind: "p",
+        text: "Kvarkens båtmuseum is at Åminne in Malax, on the mainland, not on Raippaluoto. It is a museum of working boats from the Kvarken. It does not claim to hold the particular boats Sjöberg measured. Its own page says the collection holds 119 boats and canoes, 168 engines, and more than 4,000 other objects tied to boats, fishing, sealing, and life in the archipelago, shown in 15 buildings. For 2026 it is open from 23 June to 9 August, Tuesday to Sunday, 13.00 to 18.00, and closed on Monday. Adults pay 5 euros. Anyone under 17 is free. Other times are by arrangement. Check that page before a visit. The address is Åminnevägen 433, Malax. The objects are the museum’s, and this page does not take pictures from them.",
+      },
+      {
+        kind: "a",
+        href: "https://www.malaxmuseum.fi/kvarkens-batmuseum/",
+        label: "Kvarkens båtmuseum",
+      },
+      { kind: "h2", text: "Sources" },
+      {
+        kind: "links",
+        items: [
+          {
+            href: "https://sls.finna.fi/Collection/sls.SLS+94",
+            title: "SLS 94: Traditionsuppteckningar från Replot",
+            text: "Wilhelm Sjöberg, 1904. Boats, place names, sayings, and songs. On the national Memory of the World list.",
+          },
+          {
+            href: "https://sls.finna.fi/Record/sls.SLS+94_SLS+94.1",
+            title: "The notebook, SLS 94.1",
+            text: "CC BY 4.0. The boat section begins on manuscript page 79. The typed index puts the place-name list at pages 82 to 90.",
+          },
+          {
+            href: "https://www.abo.fi/kontinuerligt-larande/sarpraglad-folkmusiktradition-i-replot/",
+            title: "Åbo Akademi: the Replot collectors",
+            text: "Vilhelm Sjöberg as a country shopkeeper, and Elisabet Gädda from Vallgrund.",
+          },
+          {
+            href: "https://www.malaxmuseum.fi/kvarkens-batmuseum/",
+            title: "Kvarkens båtmuseum",
+            text: "The 2026 opening, the counts, and the address in Malax.",
+          },
+          {
+            href: "https://creativecommons.org/licenses/by/4.0/",
+            title: "CC BY 4.0",
+            text: "The licence on Sjöberg’s notebook.",
+          },
         ],
       },
     ],

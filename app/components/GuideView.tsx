@@ -96,6 +96,29 @@ function Blocks({ blocks }: { blocks: Block[] }) {
         if (block.kind === "p") {
           return <p key={index}>{block.text}</p>;
         }
+        if (block.kind === "youtube") {
+          return (
+            <figure key={index}>
+              <iframe
+                src={`https://www.youtube.com/embed/${block.id}`}
+                title={block.title}
+                className="aspect-video w-full"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+              <figcaption className="mt-3 text-sm text-white/70">
+                <a
+                  href={`https://youtu.be/${block.id}`}
+                  className="underline underline-offset-4"
+                >
+                  {block.title}
+                </a>
+                {" on YouTube"}
+              </figcaption>
+            </figure>
+          );
+        }
         if (block.kind === "a") {
           return (
             <p key={index}>
@@ -140,6 +163,8 @@ function Blocks({ blocks }: { blocks: Block[] }) {
 }
 
 export function GuideView({ guide }: { guide: Guide }) {
+  const videos = guide.blocks.filter((block) => block.kind === "youtube");
+  const blocks = guide.blocks.filter((block) => block.kind !== "youtube");
   return (
     <article className="bg-black pb-20 text-white">
       <div className="mx-auto max-w-6xl px-5 pt-10">
@@ -168,6 +193,11 @@ export function GuideView({ guide }: { guide: Guide }) {
         </h1>
         <div className="mt-5 h-1 w-16 bg-accent" />
         <p className="mt-5 max-w-2xl text-lg leading-8 text-white/75">{guide.lede}</p>
+        {videos.length > 0 ? (
+          <div className="mt-8 max-w-3xl">
+            <Blocks blocks={videos} />
+          </div>
+        ) : null}
         {galleries[guide.path] ? <PhotoGallery photos={galleries[guide.path]} /> : null}
       </div>
 
@@ -190,9 +220,9 @@ export function GuideView({ guide }: { guide: Guide }) {
             ))}
           </dl>
         ) : null}
-        {guide.blocks.length > 0 ? (
+        {blocks.length > 0 ? (
           <div className="mt-10">
-            <Blocks blocks={guide.blocks} />
+            <Blocks blocks={blocks} />
           </div>
         ) : null}
         {guide.cards && guide.cards.length > 0 ? (
