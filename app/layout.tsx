@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Archivo, Outfit } from "next/font/google";
 import { Footer, Header } from "@/app/components/Chrome";
+import { Stats } from "@/app/components/Stats";
 import "./globals.css";
 
 const outfit = Outfit({
@@ -35,6 +36,7 @@ export default function RootLayout({
         <Header />
         <div className="flex-1">{children}</div>
         <Footer />
+        <Stats />
       </body>
     </html>
   );
